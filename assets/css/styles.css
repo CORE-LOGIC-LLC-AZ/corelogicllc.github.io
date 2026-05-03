@@ -1,0 +1,175 @@
+:root {
+  --bg: #0b1020;
+  --panel: #10172d;
+  --text: #e5e7eb;
+  --muted: #a7b0c0;
+  --brand: #4f80ff;
+  --brand-soft: #86a8ff;
+  --border: #1f2a44;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 0%, #1a2650 0%, var(--bg) 45%);
+}
+
+a {
+  color: var(--brand-soft);
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background: rgb(11 16 32 / 80%);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-wrap,
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-lockup {
+  display: block;
+  width: min(250px, 56vw);
+  height: auto;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.hero {
+  padding: 5rem 0 3rem;
+}
+
+.eyebrow {
+  color: var(--brand-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  max-width: 13ch;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.button {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card,
+.timeline > div,
+.contact-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+@media (max-width: 860px) {
+  .grid,
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-wrap,
+  .footer-wrap,
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-lockup {
+    width: min(220px, 78vw);
+  }
+
+  .site-header {
+    position: static;
+  }
+}
+

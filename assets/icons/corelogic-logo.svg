@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 8 700 122" role="img" aria-labelledby="title desc">
+  <title id="title">Core Logic LLC Full Logo</title>
+  <desc id="desc">Core Logic wordmark with gradient C mark.</desc>
+  <defs>
+    <linearGradient id="markBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#20a9ff" />
+      <stop offset="100%" stop-color="#3c52ff" />
+    </linearGradient>
+    <linearGradient id="markPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#606cff" />
+      <stop offset="100%" stop-color="#6f3bff" />
+    </linearGradient>
+    <linearGradient id="logicWord" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5fa7ff" />
+      <stop offset="100%" stop-color="#2a83ff" />
+    </linearGradient>
+  </defs>
+
+  <path d="M105 15 30 58v86l75 43 75-43-27-16-48 28-48-28V75l48-27 48 27 27-16z" fill="url(#markBlue)" transform="scale(0.62) translate(22 8)" />
+  <path d="M30 58v86l75 43 75-43-27-16-48 28-48-28V75l48-27 48 27 27-16-75-43z" fill="url(#markPurple)" opacity="0.85" transform="scale(0.62) translate(22 8)" />
+  <path d="M78 56v70l42 24 20-12-42-24V44z" fill="#ffffff" transform="scale(0.62) translate(22 8)" />
+
+  <text x="180" y="86" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="66" font-weight="700" letter-spacing="3" fill="#f3f6ff">CORE</text>
+  <text x="390" y="86" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="66" font-weight="700" letter-spacing="3" fill="url(#logicWord)">LOGIC</text>
+</svg>
+
