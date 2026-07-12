@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PeerDeck | Offline Local Card Games</title>
+    <meta
+      name="description"
+      content="Play card games with friends nearby — no internet, no account, no setup. Host a table on one iPhone and let others join over local wireless."
+    />
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/corelogic-icon.svg" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <style>
+      :root {
+        --peerdeck-emerald: #10b981;
+        --peerdeck-indigo: #6366f1;
+      }
+
+      .hero-peerdeck .eyebrow {
+        color: var(--peerdeck-emerald);
+      }
+
+      .tagline {
+        color: var(--muted);
+        font-size: 1.15rem;
+        max-width: 52ch;
+      }
+
+      .feature-list {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      .feature-list li {
+        margin-bottom: 0.5rem;
+      }
+
+      .game-badge {
+        display: inline-block;
+        background: rgb(99 102 241 / 18%);
+        color: var(--peerdeck-indigo);
+        border: 1px solid rgb(99 102 241 / 35%);
+        border-radius: 999px;
+        padding: 0.2rem 0.65rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .steps {
+        counter-reset: step;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .steps li {
+        counter-increment: step;
+        margin-bottom: 0.9rem;
+        padding-left: 2.4rem;
+        position: relative;
+      }
+
+      .steps li::before {
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: 0.1rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        background: var(--peerdeck-emerald);
+        color: #fff;
+        font-size: 0.85rem;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="PeerDeck home">
+          <img
+            class="brand-lockup"
+            src="../../assets/icons/corelogic-logo.svg"
+            alt="Core Logic logo"
+            width="250"
+            height="44"
+          />
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-peerdeck container">
+        <p class="eyebrow">Offline Local Card Games</p>
+        <h1>PeerDeck</h1>
+        <p class="tagline">
+          Play card games with friends nearby — no internet, no account, no setup. Host a table on
+          one iPhone and let others join over local wireless.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#how-it-works">See how it works</a>
+          <a class="button button-secondary" href="privacy.html">Privacy policy</a>
+        </div>
+      </section>
+
+      <section id="features" class="container section">
+        <h2>Built for real-world gatherings</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>True offline autonomy</h3>
+            <p>
+              Fully operational in dead-zones, airplanes, subways, or remote trips — no cellular
+              data, Wi‑Fi router, or online account required.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Hardware-to-hardware</h3>
+            <p>
+              Nearby devices discover each other automatically over Apple's Multipeer Connectivity
+              framework using local Wi‑Fi and Bluetooth.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Premium card-table UX</h3>
+            <p>
+              A dark, tactile interface built natively with SwiftUI — low-latency sync, haptic
+              feedback, and smooth in-person play.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="container section">
+        <h2>How it works</h2>
+        <div class="timeline">
+          <div>
+            <h3>Host a table</h3>
+            <p>Tap <strong>Host Table</strong> on one device to start a session and share a room code.</p>
+          </div>
+          <div>
+            <h3>Join locally</h3>
+            <p>Other players tap <strong>Join Table</strong>, pick a nearby host, and enter the code.</p>
+          </div>
+          <div>
+            <h3>Play in sync</h3>
+            <p>The host selects a game module and every device stays synchronized for the round.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section">
+        <h2>Launch game: 28 (Thuruppu)</h2>
+        <div class="card">
+          <p><span class="game-badge">Trick-taking · 4, 6, or 8 players</span></p>
+          <p>
+            The first supported module is the classic South Asian card game <strong>28</strong>.
+            Players sit in partnerships, bid on tricks, and set a hidden trump suit. The round
+            dealer rotates each hand; bidding opens at the seat after the dealer.
+          </p>
+          <ul class="feature-list">
+            <li>4, 6, or 8 players at the same table</li>
+            <li>Host-authoritative state sync for fair, in-person play</li>
+            <li>More game modules planned — one app, many tables</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container section">
+        <h2>Get started</h2>
+        <div class="card">
+          <ol class="steps">
+            <li>Tap <strong>Host Table</strong> on one device to start a session</li>
+            <li>Other players tap <strong>Join Table</strong> to find nearby hosts</li>
+            <li>Enter the room code, pick a game, and play together in sync</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="container section contact-card">
+        <h2>Questions or feedback</h2>
+        <p>
+          Email us at
+          <a href="mailto:admin@corelogic.cc">admin@corelogic.cc</a>
+        </p>
+        <p>
+          <a href="privacy.html">Read the PeerDeck privacy policy</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; 2026 Core Logic LLC. All rights reserved.</p>
+        <a href="../../index.html">Core Logic LLC</a>
+      </div>
+    </footer>
+  </body>
+</html>
