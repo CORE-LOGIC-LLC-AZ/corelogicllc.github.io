@@ -8,22 +8,70 @@
       name="description"
       content="Capy Merge Spa is a cozy idle merge game — buy spa capybaras, merge them into cuter looks, earn Yuzu Coins, and soak in calm onsen vibes."
     />
-    <link rel="icon" type="image/svg+xml" href="../../assets/icons/corelogic-icon.svg" />
+    <meta property="og:title" content="Capy Merge Spa" />
+    <meta
+      property="og:description"
+      content="Merge cute spa capybaras in a cozy onsen idle game from Core Logic LLC."
+    />
+    <meta property="og:image" content="images/splash.png" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="../../assets/css/styles.css" />
     <style>
       :root {
         --capy-teal: #2a9aa8;
-        --capy-cream: #f3ebe0;
       }
 
       .hero-capy .eyebrow {
         color: var(--capy-teal);
       }
 
+      .hero-capy-grid {
+        display: grid;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      @media (min-width: 860px) {
+        .hero-capy-grid {
+          grid-template-columns: 1.05fr 0.95fr;
+          gap: 2.5rem;
+        }
+      }
+
       .tagline {
         color: var(--muted);
         font-size: 1.15rem;
         max-width: 52ch;
+      }
+
+      .brand-row {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .brand-row img {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+      }
+
+      .splash-frame {
+        margin: 0;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: #0a3a42;
+        box-shadow: 0 24px 60px rgb(0 0 0 / 35%);
+      }
+
+      .splash-frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
       }
 
       .feature-list {
@@ -77,6 +125,39 @@
         display: grid;
         place-items: center;
       }
+
+      .phone-gallery {
+        display: grid;
+        gap: 1.5rem;
+        justify-items: center;
+      }
+
+      @media (min-width: 700px) {
+        .phone-gallery {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .phone {
+        margin: 0;
+        width: min(100%, 280px);
+        text-align: center;
+      }
+
+      .phone img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 1.4rem;
+        border: 1px solid var(--border);
+        background: #111;
+      }
+
+      .phone figcaption {
+        margin-top: 0.65rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
     </style>
   </head>
   <body>
@@ -94,6 +175,7 @@
         <nav aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="#features">Features</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#how-to-play">How to play</a></li>
             <li><a href="privacy.html">Privacy</a></li>
           </ul>
@@ -103,18 +185,59 @@
 
     <main>
       <section class="hero hero-capy container">
-        <p class="eyebrow">Cozy Idle Merge</p>
-        <h1>Capy Merge Spa</h1>
-        <p class="tagline">
-          Sink into a pocket onsen with chill capybaras. Merge friends, expand your spa, and soak
-          up calm vibes — no fail states, just steam and smiles.
-        </p>
-        <p>
-          <span class="game-badge">Free · iOS · Casual / Idle</span>
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#how-to-play">How to play</a>
-          <a class="button button-secondary" href="privacy.html">Privacy policy</a>
+        <div class="hero-capy-grid">
+          <div>
+            <div class="brand-row">
+              <img src="images/icon.png" width="56" height="56" alt="" />
+              <p class="eyebrow" style="margin: 0">Cozy Idle Merge</p>
+            </div>
+            <h1>Capy Merge Spa</h1>
+            <p class="tagline">
+              Sink into a pocket onsen with chill capybaras. Merge friends, expand your spa, and
+              soak up calm vibes — no fail states, just steam and smiles.
+            </p>
+            <p>
+              <span class="game-badge">Free · iOS · Casual / Idle</span>
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#how-to-play">How to play</a>
+              <a class="button button-secondary" href="privacy.html">Privacy policy</a>
+            </div>
+          </div>
+          <figure class="splash-frame">
+            <img
+              src="images/splash.png"
+              width="506"
+              height="900"
+              alt="Capy Merge Spa splash art — a cozy capybara in a steaming onsen"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="gallery" class="container section">
+        <h2>In the spa</h2>
+        <div class="phone-gallery">
+          <figure class="phone">
+            <img
+              src="images/gameplay.png"
+              width="332"
+              height="720"
+              alt="Gameplay screenshot of the hot spring merge grid"
+              loading="lazy"
+            />
+            <figcaption>Merge friends on the onsen grid</figcaption>
+          </figure>
+          <figure class="phone">
+            <img
+              src="images/album.png"
+              width="332"
+              height="720"
+              alt="Outfit Album showing five spa capybara looks"
+              loading="lazy"
+            />
+            <figcaption>Collect all five spa looks</figcaption>
+          </figure>
         </div>
       </section>
 
