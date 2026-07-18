@@ -20,6 +20,8 @@
         <nav aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="#services">Services</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#work">Work</a></li>
             <li><a href="#process">Process</a></li>
             <li><a href="games/">Games</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -37,7 +39,7 @@
           architecture and fast delivery.
         </p>
         <div class="hero-actions">
-          <a class="button" href="mailto:admin@corelogic.cc">Start a project</a>
+          <a class="button" href="#contact">Start a project</a>
           <a class="button button-secondary" href="#services">Explore services</a>
         </div>
       </section>
@@ -45,27 +47,61 @@
       <section id="services" class="container section">
         <h2>What we do</h2>
         <div class="grid">
-          <article class="card">
+          <article class="card card-interactive">
             <h3>Custom Software Development</h3>
             <p>
               Backend systems, APIs, and internal tools built for maintainability, performance,
               and growth.
             </p>
           </article>
-          <article class="card">
+          <article class="card card-interactive">
             <h3>Mobile App Development</h3>
             <p>
               Native and cross-platform app development with intuitive UX and robust release
               pipelines.
             </p>
           </article>
-          <article class="card">
+          <article class="card card-interactive">
             <h3>Product Engineering Support</h3>
             <p>
               End-to-end delivery support from architecture and prototyping through launch and
               iteration.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section id="expertise" class="container section">
+        <h2>Our Core Expertise</h2>
+        <p class="lead">
+          Modern stacks we use to ship durable products — from APIs and mobile release pipelines
+          to interactive systems.
+        </p>
+        <div class="expertise-grid">
+          <div class="expertise-item">
+            <span class="expertise-label">Backend</span>
+            <ul class="expertise-list">
+              <li>Spring Boot</li>
+              <li>REST APIs</li>
+              <li>Data architecture</li>
+            </ul>
+          </div>
+          <div class="expertise-item">
+            <span class="expertise-label">Mobile</span>
+            <ul class="expertise-list">
+              <li>Flutter</li>
+              <li>React Native</li>
+              <li>iOS / Android pipelines</li>
+            </ul>
+          </div>
+          <div class="expertise-item">
+            <span class="expertise-label">Interactive</span>
+            <ul class="expertise-list">
+              <li>Godot</li>
+              <li>Cross-platform engines</li>
+              <li>Performance tuning</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -87,6 +123,40 @@
         </div>
       </section>
 
+      <section id="work" class="container section">
+        <h2>Featured Work</h2>
+        <p class="lead">
+          Representative engagements that reflect how we approach scale, mobile quality, and
+          interactive systems.
+        </p>
+        <div class="grid">
+          <article class="card card-interactive">
+            <p class="eyebrow">Backend</p>
+            <h3>Enterprise Scale Backend</h3>
+            <p>
+              High-performance API development and data architecture for systems that need
+              reliability under load and clear domain boundaries.
+            </p>
+          </article>
+          <article class="card card-interactive">
+            <p class="eyebrow">Mobile</p>
+            <h3>Cross-Platform Mobile App</h3>
+            <p>
+              Intuitive UX and robust CI/CD release pipelines — shipping polished apps across
+              platforms with predictable, repeatable releases.
+            </p>
+          </article>
+          <article class="card card-interactive">
+            <p class="eyebrow">Interactive</p>
+            <h3>Interactive Mobile Systems</h3>
+            <p>
+              Custom mechanics and high-performance cross-platform engine deployment for
+              responsive, production-ready interactive experiences.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section id="games" class="container section">
         <h2>Our games</h2>
         <p class="lead">
@@ -100,11 +170,39 @@
 
       <section id="contact" class="container section contact-card">
         <h2>Contact</h2>
-        <p>Have a project in mind? We would love to hear about it.</p>
-        <p>
-          Email us at
-          <a href="mailto:admin@corelogic.cc">admin@corelogic.cc</a>
-        </p>
+        <p>Have a project in mind? Tell us a bit about it and we will follow up.</p>
+
+        <div class="contact-layout">
+          <form class="contact-form" id="contact-form" novalidate>
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" id="contact-name" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" id="contact-email" autocomplete="email" required />
+            </label>
+            <label class="field">
+              <span>Project Brief</span>
+              <textarea
+                name="brief"
+                id="contact-brief"
+                rows="5"
+                required
+                placeholder="Goals, timeline, and any technical constraints…"
+              ></textarea>
+            </label>
+            <button class="button" type="submit">Submit Query</button>
+          </form>
+
+          <div class="contact-aside">
+            <p class="contact-aside-label">Prefer email?</p>
+            <p>
+              Reach us directly at
+              <a href="mailto:admin@corelogic.cc">admin@corelogic.cc</a>
+            </p>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -114,6 +212,31 @@
         <a href="mailto:admin@corelogic.cc">admin@corelogic.cc</a>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        var form = document.getElementById("contact-form");
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var name = document.getElementById("contact-name").value.trim();
+          var email = document.getElementById("contact-email").value.trim();
+          var brief = document.getElementById("contact-brief").value.trim();
+
+          if (!name || !email || !brief) {
+            form.reportValidity();
+            return;
+          }
+
+          var subject = encodeURIComponent("Project inquiry from " + name);
+          var body = encodeURIComponent(
+            "Name: " + name + "\nEmail: " + email + "\n\nProject Brief:\n" + brief
+          );
+          window.location.href = "mailto:admin@corelogic.cc?subject=" + subject + "&body=" + body;
+        });
+      })();
+    </script>
   </body>
 </html>
-
