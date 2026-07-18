@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capy Merge Spa | Cozy Idle Merge Game</title>
+    <meta
+      name="description"
+      content="Capy Merge Spa is a cozy idle merge game — buy spa capybaras, merge them into cuter looks, earn Yuzu Coins, and soak in calm onsen vibes."
+    />
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/corelogic-icon.svg" />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+    <style>
+      :root {
+        --capy-teal: #2a9aa8;
+        --capy-cream: #f3ebe0;
+      }
+
+      .hero-capy .eyebrow {
+        color: var(--capy-teal);
+      }
+
+      .tagline {
+        color: var(--muted);
+        font-size: 1.15rem;
+        max-width: 52ch;
+      }
+
+      .feature-list {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      .feature-list li {
+        margin-bottom: 0.5rem;
+      }
+
+      .game-badge {
+        display: inline-block;
+        background: rgb(42 154 168 / 16%);
+        color: var(--capy-teal);
+        border: 1px solid rgb(42 154 168 / 35%);
+        border-radius: 999px;
+        padding: 0.2rem 0.65rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .steps {
+        counter-reset: step;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .steps li {
+        counter-increment: step;
+        margin-bottom: 0.9rem;
+        padding-left: 2.4rem;
+        position: relative;
+      }
+
+      .steps li::before {
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: 0.1rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        background: var(--capy-teal);
+        color: #fff;
+        font-size: 0.85rem;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Capy Merge Spa home">
+          <img
+            class="brand-lockup"
+            src="../../assets/icons/corelogic-logo.svg"
+            alt="Core Logic logo"
+            width="250"
+            height="44"
+          />
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-to-play">How to play</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-capy container">
+        <p class="eyebrow">Cozy Idle Merge</p>
+        <h1>Capy Merge Spa</h1>
+        <p class="tagline">
+          Sink into a pocket onsen with chill capybaras. Merge friends, expand your spa, and soak
+          up calm vibes — no fail states, just steam and smiles.
+        </p>
+        <p>
+          <span class="game-badge">Free · iOS · Casual / Idle</span>
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#how-to-play">How to play</a>
+          <a class="button button-secondary" href="privacy.html">Privacy policy</a>
+        </div>
+      </section>
+
+      <section id="features" class="container section">
+        <h2>Features</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Merge spa friends</h3>
+            <p>
+              Buy Level&nbsp;1 capybaras with Yuzu Coins, then drag matching levels together to
+              unlock five adorable spa looks — from Capy Lemon to Spa Royalty.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Idle onsen earnings</h3>
+            <p>
+              Capys earn coins on the grid and while you’re away (offline earnings capped for fair
+              play). Grow the board from 4×4 toward a roomier 6×6 spa.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Optional boosts</h3>
+            <p>
+              Watch a short rewarded ad for Spa Booster (2× income for a few minutes) or Double
+              Relax to double offline earnings — never required to progress.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Cozy polish</h3>
+            <p>
+              Lo-fi vibes, gentle haptics, Outfit Album, shareable spa cards, and accessibility
+              options (font scale, high contrast, reduce motion, music toggle).
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="how-to-play" class="container section">
+        <h2>How to play</h2>
+        <div class="card">
+          <ol class="steps">
+            <li>Tap <strong>Buy</strong> to place a starter capy on the hot spring grid</li>
+            <li>Drag two of the <strong>same level</strong> together to merge into the next tier</li>
+            <li>Collect Yuzu Coins over time — reinvest to buy more friends or expand the spa</li>
+            <li>Open the <strong>Album</strong> to track unlocked looks; long-press a capy to share</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="container section">
+        <h2>Details</h2>
+        <div class="card">
+          <ul class="feature-list">
+            <li><strong>Developer:</strong> Core Logic LLC</li>
+            <li><strong>Platform:</strong> iOS (Android planned)</li>
+            <li><strong>Price:</strong> Free, with optional rewarded ads</li>
+            <li><strong>Age:</strong> General audiences / 4+</li>
+            <li><strong>Bundle ID:</strong> <code>cc.corelogic.capymeregespa</code></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container section contact-card">
+        <h2>Questions or feedback</h2>
+        <p>
+          Email us at
+          <a href="mailto:admin@corelogic.cc">admin@corelogic.cc</a>
+        </p>
+        <p>
+          <a href="privacy.html">Read the Capy Merge Spa privacy policy</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; 2026 Core Logic LLC. All rights reserved.</p>
+        <a href="../../index.html">Core Logic LLC</a>
+      </div>
+    </footer>
+  </body>
+</html>
