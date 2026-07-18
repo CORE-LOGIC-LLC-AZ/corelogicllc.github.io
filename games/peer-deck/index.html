@@ -8,7 +8,13 @@
       name="description"
       content="Play card games with friends nearby — no internet, no account, no setup. Host a table on one iPhone and let others join over local wireless."
     />
-    <link rel="icon" type="image/svg+xml" href="../../assets/icons/corelogic-icon.svg" />
+    <meta property="og:title" content="PeerDeck" />
+    <meta
+      property="og:description"
+      content="Offline local card games — host a table and play with nearby friends, no internet required."
+    />
+    <meta property="og:image" content="images/gameplay.jpg" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="../../assets/css/styles.css" />
     <style>
       :root {
@@ -20,10 +26,53 @@
         color: var(--peerdeck-emerald);
       }
 
+      .hero-peerdeck-grid {
+        display: grid;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      @media (min-width: 860px) {
+        .hero-peerdeck-grid {
+          grid-template-columns: 1.05fr 0.95fr;
+          gap: 2.5rem;
+        }
+      }
+
       .tagline {
         color: var(--muted);
         font-size: 1.15rem;
         max-width: 52ch;
+      }
+
+      .brand-row {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .brand-row img {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+      }
+
+      .hero-shot {
+        margin: 0;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: #05070b;
+        box-shadow: 0 24px 60px rgb(0 0 0 / 35%);
+      }
+
+      .hero-shot img {
+        display: block;
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
       }
 
       .feature-list {
@@ -77,6 +126,45 @@
         display: grid;
         place-items: center;
       }
+
+      .phone-gallery {
+        display: grid;
+        gap: 1.5rem;
+        justify-items: center;
+      }
+
+      @media (min-width: 700px) {
+        .phone-gallery {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        .phone-gallery {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .phone {
+        margin: 0;
+        width: min(100%, 280px);
+        text-align: center;
+      }
+
+      .phone img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 1.4rem;
+        border: 1px solid var(--border);
+        background: #111;
+      }
+
+      .phone figcaption {
+        margin-top: 0.65rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
     </style>
   </head>
   <body>
@@ -94,6 +182,7 @@
         <nav aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="#features">Features</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#how-it-works">How it works</a></li>
             <li><a href="privacy.html">Privacy</a></li>
           </ul>
@@ -103,15 +192,89 @@
 
     <main>
       <section class="hero hero-peerdeck container">
-        <p class="eyebrow">Offline Local Card Games</p>
-        <h1>PeerDeck</h1>
-        <p class="tagline">
-          Play card games with friends nearby — no internet, no account, no setup. Host a table on
-          one iPhone and let others join over local wireless.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#how-it-works">See how it works</a>
-          <a class="button button-secondary" href="privacy.html">Privacy policy</a>
+        <div class="hero-peerdeck-grid">
+          <div>
+            <div class="brand-row">
+              <img src="images/icon.png" width="56" height="56" alt="" />
+              <p class="eyebrow" style="margin: 0">Offline Local Card Games</p>
+            </div>
+            <h1>PeerDeck</h1>
+            <p class="tagline">
+              Play card games with friends nearby — no internet, no account, no setup. Host a table
+              on one iPhone and let others join over local wireless.
+            </p>
+            <p>
+              <span class="game-badge">Free · iOS · Local multiplayer</span>
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#how-it-works">See how it works</a>
+              <a class="button button-secondary" href="privacy.html">Privacy policy</a>
+            </div>
+          </div>
+          <figure class="hero-shot">
+            <img
+              src="images/gameplay.jpg"
+              width="660"
+              height="1434"
+              alt="PeerDeck gameplay — playing 28 with cards on every phone"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="gallery" class="container section">
+        <h2>At the table</h2>
+        <div class="phone-gallery">
+          <figure class="phone">
+            <img
+              src="images/dashboard.jpg"
+              width="660"
+              height="1434"
+              alt="PeerDeck dashboard with Host Table and Join Table"
+              loading="lazy"
+            />
+            <figcaption>Card games with friends nearby.</figcaption>
+          </figure>
+          <figure class="phone">
+            <img
+              src="images/lobby.jpg"
+              width="660"
+              height="1434"
+              alt="PeerDeck lobby with room code and connected players"
+              loading="lazy"
+            />
+            <figcaption>One host. Everyone joins locally.</figcaption>
+          </figure>
+          <figure class="phone">
+            <img
+              src="images/games.jpg"
+              width="660"
+              height="1434"
+              alt="PeerDeck game selection showing 28 Thuruppu"
+              loading="lazy"
+            />
+            <figcaption>Classic trick-taking. More coming soon.</figcaption>
+          </figure>
+          <figure class="phone">
+            <img
+              src="images/join.jpg"
+              width="660"
+              height="1434"
+              alt="PeerDeck nearby table discovery"
+              loading="lazy"
+            />
+            <figcaption>No internet. No account. Just play.</figcaption>
+          </figure>
+          <figure class="phone">
+            <img
+              src="images/gameplay.jpg"
+              width="660"
+              height="1434"
+              alt="PeerDeck active 28 trick play"
+              loading="lazy"
+            />
+            <figcaption>Play 28 with real cards on every phone.</figcaption>
+          </figure>
         </div>
       </section>
 
