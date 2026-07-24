@@ -8,6 +8,8 @@ Simple static website for **Core Logic LLC**, focused on software and app develo
 - `assets/css/styles.css` - Site styles.
 - `assets/icons/corelogic-icon.svg` - Active brand icon and favicon (attached style).
 - `assets/icons/corelogic-logo.svg` - Full logo lockup used in the header.
+- `captionbake/` - CaptionBake product page and macOS downloaders.
+- `games/` - Games hub and per-game pages.
 
 ## Run locally
 

@@ -1,0 +1,11 @@
+/* CaptionBake product page — light accents on Core Logic site shell */
+
+.meta {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.meta a {
+  color: var(--brand-soft);
+}
