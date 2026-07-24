@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### release/captionbake-arm64-only
+
+- CaptionBake public downloads are Apple Silicon only; removed the Intel (x86_64) download button and config entry.
+
 ### feat/captionbake-http-api-docs
 
 - Documented CaptionBake’s latest features on the product page: word highlight (experimental ASR, accuracy caveats, ~142 MB model disk use), local HTTP API, and free forever.

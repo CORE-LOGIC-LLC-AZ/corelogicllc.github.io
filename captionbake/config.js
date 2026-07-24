@@ -2,7 +2,6 @@
 window.CAPTIONBAKE_RELEASE = {
   version: "0.1.0",
   arm64: "./downloads/CaptionBake-0.1.0-macos-arm64.dmg",
-  x86_64: "./downloads/CaptionBake-0.1.0-macos-x86_64.dmg",
   tipUrl: "https://github.com/sponsors/CORE-LOGIC-LLC-AZ",
 };
 
@@ -10,7 +9,5 @@ window.CAPTIONBAKE_RELEASE = {
   var cfg = window.CAPTIONBAKE_RELEASE;
   if (!cfg) return;
   var arm = document.getElementById("download-arm");
-  var intel = document.getElementById("download-intel");
   if (arm) arm.setAttribute("href", cfg.arm64);
-  if (intel) intel.setAttribute("href", cfg.x86_64);
 })();
