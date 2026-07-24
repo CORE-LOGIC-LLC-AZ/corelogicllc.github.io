@@ -87,3 +87,90 @@
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+.feature-badge {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.12em 0.45em;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+/* Local HTTP API docs */
+.api-docs {
+  max-width: 46rem;
+}
+
+.api-docs h3 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+.api-docs h3:first-child {
+  margin-top: 0;
+}
+
+.api-docs h4 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.api-docs p,
+.api-docs li {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.api-docs code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.88em;
+  color: var(--ink, #1a1a1a);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  padding: 0.1em 0.35em;
+}
+
+.api-steps,
+.api-fields {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.api-steps li + li,
+.api-fields li + li {
+  margin-top: 0.4rem;
+}
+
+.api-code {
+  margin: 0.75rem 0 1.25rem;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: #111827;
+  color: #e5e7eb;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  box-shadow: var(--shadow-soft);
+}
+
+.api-code code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  white-space: pre;
+}

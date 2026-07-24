@@ -6,12 +6,12 @@
     <title>CaptionBake | Core Logic LLC</title>
     <meta
       name="description"
-      content="CaptionBake is a free macOS app from Core Logic LLC for styling captions and burning them into video. Offline. No account."
+      content="CaptionBake is a free macOS app from Core Logic LLC for styling captions and burning them into video — plus a local HTTP API for automation. Offline. No account."
     />
     <meta property="og:title" content="CaptionBake" />
     <meta
       property="og:description"
-      content="Burn captions into video — style them live, then export a finished MP4. Offline, no account."
+      content="Burn captions into video — style them live, export a finished MP4, or automate with a local HTTP API. Offline, no account."
     />
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
@@ -62,8 +62,8 @@
             </div>
             <h1>CaptionBake</h1>
             <p class="lead">
-              Burn captions into video — style them live, then export a finished MP4. Offline, no
-              account, no subscription.
+              Burn captions into video — style them live, export a finished MP4, or automate exports
+              with a local HTTP API. Offline, no account, no subscription.
             </p>
             <div class="hero-actions" id="download">
               <a
@@ -81,6 +81,7 @@
             </div>
             <p class="meta">
               macOS 12+ · FFmpeg included ·
+              <a href="#api">HTTP API</a> ·
               <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
             </p>
           </div>
@@ -141,8 +142,8 @@
           <article class="offer-item">
             <h3>Live styling</h3>
             <p>
-              Import video and captions, tweak font, color, position, and safe areas in a real-time
-              preview.
+              Import video and captions, tweak font, color, stroke, shadow, position, and safe areas
+              in a real-time preview.
             </p>
           </article>
           <article class="offer-item">
@@ -157,6 +158,179 @@
               Export a captioned MP4 on your Mac. No cloud upload — FFmpeg is bundled in the app.
             </p>
           </article>
+          <article class="offer-item">
+            <h3>Word highlight <span class="feature-badge">Experimental</span></h3>
+            <p>
+              Optionally highlight the spoken word using on-device ASR (Whisper). Alignment can
+              mis-hear or mistime words — review before you ship. First use downloads a model
+              (~142&nbsp;MB of extra disk space).
+            </p>
+          </article>
+          <article class="offer-item">
+            <h3>Local HTTP API</h3>
+            <p>
+              Enable a localhost server from Settings to export from scripts or other apps while
+              CaptionBake is open — same styles as the Style panel.
+            </p>
+          </article>
+          <article class="offer-item">
+            <h3>Free forever</h3>
+            <p>
+              No account, no subscription, no ads. Tips are optional and help fund updates.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="api" class="container section">
+        <div class="section-intro">
+          <h2>Local HTTP API</h2>
+          <p class="lead">
+            Automate caption burn-in from Final Cut, a shell script, or any tool that can send HTTP.
+            The server runs only while CaptionBake is open, and only on your Mac
+            (<code>127.0.0.1</code>).
+          </p>
+        </div>
+
+        <div class="api-docs">
+          <h3>1. Enable the server</h3>
+          <ol class="api-steps">
+            <li>Open CaptionBake.</li>
+            <li>Click the gear icon in the header to open <strong>Settings</strong>.</li>
+            <li>Turn on <strong>Enable HTTP server</strong>.</li>
+            <li>
+              Confirm the port (default <code>18765</code>). Change it if something else already
+              uses that port.
+            </li>
+          </ol>
+          <p>
+            The server listens at
+            <code>http://127.0.0.1:&lt;port&gt;</code>. It stops when you turn the toggle off or
+            quit the app. Preferences (enabled + port) are remembered for next launch.
+          </p>
+
+          <h3>2. Style first (optional)</h3>
+          <p>
+            Tune the Style panel in the app as usual. Exports use those live settings unless your
+            request overrides individual fields. You can also
+            <a href="#api-get-settings">read the current non-default style</a> over HTTP.
+          </p>
+
+          <h3>3. Export with <code>POST /export</code></h3>
+          <p>Send a JSON body with these required fields:</p>
+          <ul class="api-fields">
+            <li>
+              <code>caption</code> — absolute path to a local caption file (SRT, VTT, SBV, ASS/SSA,
+              ITT/TTML, …)
+            </li>
+            <li><code>inputVideo</code> — absolute path to a local video file</li>
+            <li>
+              <code>exportedVideo</code> — absolute path for the output file (must be
+              <code>.mp4</code>; if you omit the extension, <code>.mp4</code> is appended)
+            </li>
+          </ul>
+          <p>
+            Any other Style panel fields are optional and override the live UI for that export only
+            (same names as in the app / GET response): <code>fontFamily</code>,
+            <code>fontSize</code>, <code>bold</code>, <code>italic</code>, <code>textColor</code>,
+            <code>alignment</code>, <code>offsetYPercent</code>, <code>wordHighlightEnabled</code>,
+            and so on.
+          </p>
+
+          <h4>Sample: basic export</h4>
+          <pre class="api-code" tabindex="0"><code>curl -X POST http://127.0.0.1:18765/export \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "caption": "/Users/you/Movies/talk.srt",
+    "inputVideo": "/Users/you/Movies/talk.mov",
+    "exportedVideo": "/Users/you/Movies/talk_captioned.mp4"
+  }'</code></pre>
+
+          <h4>Sample: export with style overrides</h4>
+          <pre class="api-code" tabindex="0"><code>curl -X POST http://127.0.0.1:18765/export \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "caption": "/Users/you/Movies/talk.srt",
+    "inputVideo": "/Users/you/Movies/talk.mov",
+    "exportedVideo": "/Users/you/Movies/out/talk_captioned",
+    "fontSize": 56,
+    "textColor": "#FFFFFF",
+    "alignment": "bottom-center",
+    "bold": true,
+    "strokeWidth": 3
+  }'</code></pre>
+          <p>
+            In the example above, <code>exportedVideo</code> has no extension, so CaptionBake
+            writes <code>talk_captioned.mp4</code>.
+          </p>
+
+          <h4>Success response</h4>
+          <pre class="api-code" tabindex="0"><code>{
+  "ok": true,
+  "output": "/Users/you/Movies/out/talk_captioned.mp4"
+}</code></pre>
+
+          <h4>Error response</h4>
+          <pre class="api-code" tabindex="0"><code>{
+  "ok": false,
+  "error": "caption not found: /Users/you/Movies/missing.srt"
+}</code></pre>
+          <p>
+            Common status codes: <code>400</code> validation,
+            <code>404</code> missing file, <code>409</code> another export already running,
+            <code>500</code> export failure.
+          </p>
+
+          <h3 id="api-get-settings">4. Read style with <code>GET /settings</code></h3>
+          <p>
+            Returns only Style panel fields that differ from CaptionBake defaults — using the same
+            attribute names accepted by <code>POST /export</code>. Useful for cloning your current
+            look into a script.
+          </p>
+          <pre class="api-code" tabindex="0"><code>curl http://127.0.0.1:18765/settings</code></pre>
+          <p>Example when you’ve changed a few controls:</p>
+          <pre class="api-code" tabindex="0"><code>{
+  "fontSize": 56,
+  "alignment": "top-center",
+  "bold": true,
+  "textColor": "#FFE566"
+}</code></pre>
+          <p>If everything is still at defaults, you get an empty object: <code>{}</code>.</p>
+
+          <h4>Sample: fetch settings, then export</h4>
+          <pre class="api-code" tabindex="0"><code># Capture current non-default style from the app
+STYLE=$(curl -s http://127.0.0.1:18765/settings)
+
+# Merge paths + style into one POST body (requires jq)
+curl -X POST http://127.0.0.1:18765/export \
+  -H 'Content-Type: application/json' \
+  -d "$(jq -n \
+    --argjson style "$STYLE" \
+    --arg caption "/Users/you/Movies/talk.srt" \
+    --arg inputVideo "/Users/you/Movies/talk.mov" \
+    --arg exportedVideo "/Users/you/Movies/talk_captioned.mp4" \
+    '$style + {
+      caption: $caption,
+      inputVideo: $inputVideo,
+      exportedVideo: $exportedVideo
+    }')"
+</code></pre>
+
+          <h3>Notes</h3>
+          <ul class="api-fields">
+            <li>Bind address is localhost only — not reachable from other machines on your network.</li>
+            <li>Paths must be absolute paths on the same Mac running CaptionBake.</li>
+            <li>One export at a time; wait for the previous request to finish.</li>
+            <li>
+              <code>alignment</code> values match the Style panel:
+              <code>bottom-center</code>, <code>top-left</code>, <code>center</code>, etc.
+            </li>
+            <li>
+              <code>wordHighlightEnabled</code> is an <strong>experimental</strong> ASR feature.
+              On-device Whisper can mis-hear or mistime words, and the first run downloads a model
+              (~142&nbsp;MB of extra disk). Expect longer exports when it is enabled.
+            </li>
+          </ul>
         </div>
       </section>
 

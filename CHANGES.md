@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### feat/captionbake-http-api-docs
+
+- Documented CaptionBake’s latest features on the product page: word highlight (experimental ASR, accuracy caveats, ~142 MB model disk use), local HTTP API, and free forever.
+- Added a Local HTTP API section with enable steps, field reference, and sample `curl` commands for `POST /export` and `GET /settings`.
+- Updated homepage CaptionBake blurb to mention automation via the local HTTP API.
+
 ### fix/cache-bust-light-theme
 
 - Cache-bust CSS and brand assets so browsers pick up the light studio theme instead of a stale dark stylesheet.
