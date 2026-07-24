@@ -611,8 +611,8 @@ h3 {
 
 .hub-item {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1.5rem;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.25rem 1.5rem;
   align-items: center;
   padding: 2rem 0;
   border-top: 1px solid var(--border);
@@ -627,6 +627,16 @@ h3 {
 
 .hub-item:hover {
   padding-left: 0.5rem;
+}
+
+.hub-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+  background: var(--surface);
 }
 
 .hub-item h2 {
@@ -715,9 +725,23 @@ h3 {
   .expertise-grid,
   .contact-layout,
   .strip,
-  .work-row,
-  .hub-item {
+  .work-row {
     grid-template-columns: 1fr;
+  }
+
+  .hub-item {
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+  }
+
+  .hub-item .hub-arrow {
+    display: none;
+  }
+
+  .hub-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
   }
 
   .strip-actions {
