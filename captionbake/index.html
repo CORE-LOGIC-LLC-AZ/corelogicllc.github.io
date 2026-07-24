@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CaptionBake | Core Logic LLC</title>
+    <meta
+      name="description"
+      content="CaptionBake is a free macOS app from Core Logic LLC for styling captions and burning them into video. Offline. No account."
+    />
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/corelogic-icon.svg" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="captionbake.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="brand" aria-label="Core Logic LLC home">
+          <img
+            class="brand-lockup"
+            src="../assets/icons/corelogic-logo.svg"
+            alt="Core Logic logo"
+            width="250"
+            height="44"
+          />
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../games/">Games</a></li>
+            <li><a href="index.html" aria-current="page">CaptionBake</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <p class="eyebrow">Free macOS app</p>
+        <h1>CaptionBake</h1>
+        <p class="lead">
+          Burn captions into video — style them live, then export a finished MP4. Offline, no
+          account, no subscription.
+        </p>
+        <div class="hero-actions" id="download">
+          <a
+            class="button"
+            id="download-arm"
+            href="./downloads/CaptionBake-0.1.0-macos-arm64.dmg"
+            >Download for Apple Silicon</a
+          >
+          <a
+            class="button button-secondary"
+            id="download-intel"
+            href="./downloads/CaptionBake-0.1.0-macos-x86_64.dmg"
+            >Download for Intel</a
+          >
+        </div>
+        <p class="meta">
+          macOS 12+ · FFmpeg included ·
+          <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
+        </p>
+      </section>
+
+      <section class="container section">
+        <h2>What you get</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Live styling</h3>
+            <p>
+              Import video and captions, tweak font, color, position, and safe areas in a real-time
+              preview.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Many caption formats</h3>
+            <p>
+              Works with SRT, VTT, SBV, ASS/SSA, and iTunes Timed Text / TTML (.itt, .ttml, .dfxp).
+            </p>
+          </article>
+          <article class="card">
+            <h3>Offline burn-in</h3>
+            <p>
+              Export a captioned MP4 on your Mac. No cloud upload — FFmpeg is bundled in the app.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section">
+        <h2>Free, with optional tips</h2>
+        <p class="lead">
+          CaptionBake is free from Core Logic LLC. Tips help us keep shipping updates — no
+          subscriptions, no ads.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-secondary" href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ"
+            >Tip jar</a
+          >
+          <a class="button button-secondary" href="./downloads/SHA256SUMS.txt">Checksums</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year">2026</span> Core Logic LLC. All rights reserved.</p>
+        <a href="../index.html">Core Logic LLC</a>
+      </div>
+    </footer>
+
+    <script src="./config.js"></script>
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>

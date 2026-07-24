@@ -1,0 +1,1 @@
+39c913f370263306e564bcedac975bf599eba936eea1b29c288deb771764ba95  CaptionBake-0.1.0-macos-arm64.dmg
