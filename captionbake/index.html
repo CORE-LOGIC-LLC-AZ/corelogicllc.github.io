@@ -24,13 +24,24 @@
         <a href="../index.html" class="brand" aria-label="Core Logic LLC home">
           <img
             class="brand-lockup"
-            src="../assets/icons/corelogic-logo.svg"
+            src="../assets/icons/corelogic-logo-on-light.png"
             alt="Core Logic logo"
             width="250"
             height="44"
           />
         </a>
-        <nav aria-label="Main navigation">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../games/">Games</a></li>
@@ -85,7 +96,9 @@
       </section>
 
       <section id="gallery" class="container section">
-        <h2>In the app</h2>
+        <div class="section-intro">
+          <h2>In the app</h2>
+        </div>
         <div class="shot-gallery">
           <figure class="shot">
             <img
@@ -121,22 +134,24 @@
       </section>
 
       <section class="container section">
-        <h2>What you get</h2>
-        <div class="grid">
-          <article class="card">
+        <div class="section-intro">
+          <h2>What you get</h2>
+        </div>
+        <div class="offer-grid">
+          <article class="offer-item">
             <h3>Live styling</h3>
             <p>
               Import video and captions, tweak font, color, position, and safe areas in a real-time
               preview.
             </p>
           </article>
-          <article class="card">
+          <article class="offer-item">
             <h3>Many caption formats</h3>
             <p>
               Works with SRT, VTT, SBV, ASS/SSA, and iTunes Timed Text / TTML (.itt, .ttml, .dfxp).
             </p>
           </article>
-          <article class="card">
+          <article class="offer-item">
             <h3>Offline burn-in</h3>
             <p>
               Export a captioned MP4 on your Mac. No cloud upload — FFmpeg is bundled in the app.
@@ -146,16 +161,20 @@
       </section>
 
       <section class="container section">
-        <h2>Free, with optional tips</h2>
-        <p class="lead">
-          CaptionBake is free from Core Logic LLC. Tips help us keep shipping updates — no
-          subscriptions, no ads.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-secondary" href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ"
-            >Tip jar</a
-          >
-          <a class="button button-secondary" href="./downloads/SHA256SUMS.txt">Checksums</a>
+        <div class="strip">
+          <div>
+            <h2>Free, with optional tips</h2>
+            <p class="lead">
+              CaptionBake is free from Core Logic LLC. Tips help us keep shipping updates — no
+              subscriptions, no ads.
+            </p>
+          </div>
+          <div class="strip-actions">
+            <a class="button button-secondary" href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ"
+              >Tip jar</a
+            >
+            <a class="button button-secondary" href="./downloads/SHA256SUMS.txt">Checksums</a>
+          </div>
         </div>
       </section>
     </main>
@@ -170,6 +189,16 @@
     <script src="./config.js"></script>
     <script>
       document.getElementById("year").textContent = String(new Date().getFullYear());
+      (function () {
+        var toggle = document.querySelector(".nav-toggle");
+        var nav = document.getElementById("site-nav");
+        if (!toggle || !nav) return;
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        });
+      })();
     </script>
   </body>
 </html>

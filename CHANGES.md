@@ -1,0 +1,10 @@
+# Changes
+
+## Unreleased
+
+### feat/light-studio-redesign
+
+- Redesigned the marketing site with a light studio visual system (paper canvas, Syne/Figtree typography, ink + brand-blue accents).
+- Restructured homepage hero and sections for a cleaner agency presentation; shared styles cascade to CaptionBake and Games pages.
+- Introduced a circuit-style Core Logic CL mark and updated favicon/header lockups to brand blue.
+- Added mobile nav toggle and refreshed product-page chrome to match the new shell.
