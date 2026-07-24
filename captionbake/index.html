@@ -8,7 +8,13 @@
       name="description"
       content="CaptionBake is a free macOS app from Core Logic LLC for styling captions and burning them into video. Offline. No account."
     />
-    <link rel="icon" type="image/svg+xml" href="../assets/icons/corelogic-icon.svg" />
+    <meta property="og:title" content="CaptionBake" />
+    <meta
+      property="og:description"
+      content="Burn captions into video — style them live, then export a finished MP4. Offline, no account."
+    />
+    <meta property="og:image" content="images/screenshot-3.png" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="captionbake.css" />
   </head>
@@ -36,31 +42,82 @@
     </header>
 
     <main>
-      <section class="hero container">
-        <p class="eyebrow">Free macOS app</p>
-        <h1>CaptionBake</h1>
-        <p class="lead">
-          Burn captions into video — style them live, then export a finished MP4. Offline, no
-          account, no subscription.
-        </p>
-        <div class="hero-actions" id="download">
-          <a
-            class="button"
-            id="download-arm"
-            href="./downloads/CaptionBake-0.1.0-macos-arm64.dmg"
-            >Download for Apple Silicon</a
-          >
-          <a
-            class="button button-secondary"
-            id="download-intel"
-            href="./downloads/CaptionBake-0.1.0-macos-x86_64.dmg"
-            >Download for Intel</a
-          >
+      <section class="hero container hero-captionbake">
+        <div class="hero-captionbake-grid">
+          <div>
+            <div class="brand-row">
+              <img src="images/icon.png" width="56" height="56" alt="" />
+              <p class="eyebrow" style="margin: 0">Free macOS app</p>
+            </div>
+            <h1>CaptionBake</h1>
+            <p class="lead">
+              Burn captions into video — style them live, then export a finished MP4. Offline, no
+              account, no subscription.
+            </p>
+            <div class="hero-actions" id="download">
+              <a
+                class="button"
+                id="download-arm"
+                href="./downloads/CaptionBake-0.1.0-macos-arm64.dmg"
+                >Download for Apple Silicon</a
+              >
+              <a
+                class="button button-secondary"
+                id="download-intel"
+                href="./downloads/CaptionBake-0.1.0-macos-x86_64.dmg"
+                >Download for Intel</a
+              >
+            </div>
+            <p class="meta">
+              macOS 12+ · FFmpeg included ·
+              <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
+            </p>
+          </div>
+          <figure class="hero-shot">
+            <img
+              src="images/screenshot-3.png"
+              width="1282"
+              height="933"
+              alt="CaptionBake preview with live caption styling on a video"
+            />
+          </figure>
         </div>
-        <p class="meta">
-          macOS 12+ · FFmpeg included ·
-          <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
-        </p>
+      </section>
+
+      <section id="gallery" class="container section">
+        <h2>In the app</h2>
+        <div class="shot-gallery">
+          <figure class="shot">
+            <img
+              src="images/screenshot-1.png"
+              width="1274"
+              height="798"
+              alt="CaptionBake import screen for video and caption files"
+              loading="lazy"
+            />
+            <figcaption>Drop in a video and caption file to get started.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="images/screenshot-2.png"
+              width="1276"
+              height="798"
+              alt="CaptionBake style panel with color, stroke, shadow, and alignment controls"
+              loading="lazy"
+            />
+            <figcaption>Tune color, stroke, shadow, and placement in the Style panel.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img
+              src="images/screenshot-3.png"
+              width="1282"
+              height="933"
+              alt="CaptionBake live preview burning captions into video"
+              loading="lazy"
+            />
+            <figcaption>Preview captions live, then export a finished MP4.</figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="container section">
