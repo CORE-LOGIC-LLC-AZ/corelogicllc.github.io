@@ -6,12 +6,12 @@
     <title>CaptionBake | Core Logic LLC</title>
     <meta
       name="description"
-      content="CaptionBake is a free macOS app from Core Logic LLC for styling captions and burning them into video — plus a local HTTP API for automation. Offline. No account."
+      content="CaptionBake is a freemium macOS app from Core Logic LLC for styling captions and burning them into video. Free unlimited burn-in; Pro unlocks Whisper karaoke, word timing, .ass export, and a local HTTP API."
     />
     <meta property="og:title" content="CaptionBake" />
     <meta
       property="og:description"
-      content="Burn captions into video — style them live, export a finished MP4, or automate with a local HTTP API. Offline, no account."
+      content="Burn captions into video — free unlimited MP4 burn-in, or upgrade to Pro for Whisper karaoke, word timing, and local HTTP automation. Offline."
     />
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
@@ -58,12 +58,13 @@
           <div>
             <div class="brand-row">
               <img src="images/icon.png" width="56" height="56" alt="" />
-              <p class="eyebrow" style="margin: 0">Free macOS app</p>
+              <p class="eyebrow" style="margin: 0">Freemium macOS app</p>
             </div>
             <h1>CaptionBake</h1>
             <p class="lead">
-              Burn captions into video — style them live, export a finished MP4, or automate exports
-              with a local HTTP API. Offline, no account, no subscription.
+              Burn captions into video — style them live and export a finished MP4 for free.
+              Upgrade to Pro for Whisper karaoke, word timing review, editable
+              <code>.ass</code> export, and a local HTTP API.
             </p>
             <div class="hero-actions" id="download">
               <a
@@ -74,7 +75,8 @@
               >
             </div>
             <p class="meta">
-              macOS 12+ · Apple Silicon · FFmpeg included ·
+              macOS 12+ · Apple Silicon · FFmpeg included · Free burn-in ·
+              <a href="#pricing">Pro</a> ·
               <a href="#api">HTTP API</a> ·
               <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
             </p>
@@ -153,7 +155,7 @@
             </p>
           </article>
           <article class="offer-item">
-            <h3>Word highlight <span class="feature-badge">Experimental</span></h3>
+            <h3>Word highlight <span class="feature-badge">Pro</span></h3>
             <p>
               Optionally highlight the spoken word using on-device ASR (Whisper). Alignment can
               mis-hear or mistime words — review before you ship. First use downloads a model
@@ -161,16 +163,42 @@
             </p>
           </article>
           <article class="offer-item">
-            <h3>Local HTTP API</h3>
+            <h3>Local HTTP API <span class="feature-badge">Pro</span></h3>
             <p>
               Enable a localhost server from Settings to export from scripts or other apps while
               CaptionBake is open — same styles as the Style panel.
             </p>
           </article>
           <article class="offer-item">
-            <h3>Free forever</h3>
+            <h3>Free burn-in forever</h3>
             <p>
-              No account, no subscription, no ads. Tips are optional and help fund updates.
+              Unlimited full-res MP4 export with no watermark. No account required to download or
+              use the free tier. Tips are optional.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="pricing" class="container section">
+        <div class="section-intro">
+          <h2>Free vs Pro</h2>
+          <p class="lead">
+            Download free. Unlock power tools when you need them — <strong>$39</strong> one-time or
+            <strong>$9/mo</strong> via Lemon Squeezy (activate the license key in Settings).
+          </p>
+        </div>
+        <div class="offer-grid">
+          <article class="offer-item">
+            <h3>Free</h3>
+            <p>
+              All caption formats, full canvas styling, and unlimited watermark-free MP4 burn-in.
+            </p>
+          </article>
+          <article class="offer-item">
+            <h3>Pro</h3>
+            <p>
+              Whisper karaoke alignment, word timing / cascade editor, editable karaoke
+              <code>.ass</code> export, named style presets, and the local HTTP REST API.
             </p>
           </article>
         </div>
@@ -178,11 +206,11 @@
 
       <section id="api" class="container section">
         <div class="section-intro">
-          <h2>Local HTTP API</h2>
+          <h2>Local HTTP API <span class="feature-badge">Pro</span></h2>
           <p class="lead">
             Automate caption burn-in from Final Cut, a shell script, or any tool that can send HTTP.
             The server runs only while CaptionBake is open, and only on your Mac
-            (<code>127.0.0.1</code>).
+            (<code>127.0.0.1</code>). Requires CaptionBake Pro.
           </p>
         </div>
 
@@ -191,7 +219,7 @@
           <ol class="api-steps">
             <li>Open CaptionBake.</li>
             <li>Click the gear icon in the header to open <strong>Settings</strong>.</li>
-            <li>Turn on <strong>Enable HTTP server</strong>.</li>
+            <li>Turn on <strong>Enable HTTP server</strong> (Pro license required).</li>
             <li>
               Confirm the port (default <code>18765</code>). Change it if something else already
               uses that port.
@@ -331,13 +359,14 @@ curl -X POST http://127.0.0.1:18765/export \
       <section class="container section">
         <div class="strip">
           <div>
-            <h2>Free, with optional tips</h2>
+            <h2>Upgrade or tip</h2>
             <p class="lead">
-              CaptionBake is free from Core Logic LLC. Tips help us keep shipping updates — no
-              subscriptions, no ads.
+              Free burn-in stays unlimited. CaptionBake Pro unlocks karaoke tooling and automation.
+              Tips via GitHub Sponsors are optional and still appreciated.
             </p>
           </div>
           <div class="strip-actions">
+            <a class="button" href="#pricing">See Pro</a>
             <a class="button button-secondary" href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ"
               >Tip jar</a
             >
