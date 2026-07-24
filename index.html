@@ -8,16 +8,39 @@
       name="description"
       content="Core Logic LLC builds modern software and mobile apps for startups and growing businesses."
     />
-    <link rel="icon" type="image/svg+xml" href="assets/icons/corelogic-icon.svg" />
+    <link rel="icon" type="image/png" href="assets/icons/corelogic-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
         <a href="#home" class="brand" aria-label="Core Logic LLC home">
-          <img class="brand-lockup" src="assets/icons/corelogic-logo.svg" alt="Core Logic logo" width="250" height="44" />
+          <img
+            class="brand-lockup"
+            src="assets/icons/corelogic-logo-on-light.png"
+            alt="Core Logic logo"
+            width="250"
+            height="44"
+          />
         </a>
-        <nav aria-label="Main navigation">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="#services">Services</a></li>
             <li><a href="#expertise">Expertise</a></li>
@@ -32,54 +55,59 @@
     </header>
 
     <main id="home">
-      <section class="hero container">
-        <p class="eyebrow">Software and App Development</p>
-        <h1>Build reliable digital products with a focused engineering partner.</h1>
-        <p class="lead">
-          We help teams design, build, and launch web platforms and mobile apps with clean
-          architecture and fast delivery.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#contact">Start a project</a>
-          <a class="button button-secondary" href="#services">Explore services</a>
+      <section class="hero hero-home container">
+        <div class="hero-content">
+          <p class="brand-hero">Core <span>Logic</span></p>
+          <h1>Software that earns its place in the world.</h1>
+          <p class="lead">
+            We design and ship web platforms and mobile apps with clean architecture and decisive
+            delivery — for teams who care how the product feels.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Start a project</a>
+            <a class="button button-secondary" href="#services">Explore services</a>
+          </div>
         </div>
       </section>
 
       <section id="services" class="container section">
-        <h2>What we do</h2>
-        <div class="grid">
-          <article class="card card-interactive">
-            <h3>Custom Software Development</h3>
+        <div class="section-intro">
+          <h2>What we do</h2>
+          <p class="lead">Focused engineering partnership across product surfaces that matter.</p>
+        </div>
+        <div class="offer-grid">
+          <article class="offer-item">
+            <h3>Custom Software</h3>
             <p>
-              Backend systems, APIs, and internal tools built for maintainability, performance,
-              and growth.
+              Backend systems, APIs, and internal tools built for maintainability, performance, and
+              growth.
             </p>
           </article>
-          <article class="card card-interactive">
-            <h3>Mobile App Development</h3>
+          <article class="offer-item">
+            <h3>Mobile Apps</h3>
             <p>
-              Native and cross-platform app development with intuitive UX and robust release
-              pipelines.
+              Native and cross-platform development with intuitive UX and robust release pipelines.
             </p>
           </article>
-          <article class="card card-interactive">
-            <h3>Product Engineering Support</h3>
+          <article class="offer-item">
+            <h3>Product Engineering</h3>
             <p>
-              End-to-end delivery support from architecture and prototyping through launch and
-              iteration.
+              End-to-end delivery from architecture and prototyping through launch and iteration.
             </p>
           </article>
         </div>
       </section>
 
       <section id="expertise" class="container section">
-        <h2>Our Core Expertise</h2>
-        <p class="lead">
-          Modern stacks we use to ship durable products — from APIs and mobile release pipelines
-          to interactive systems.
-        </p>
+        <div class="section-intro">
+          <h2>Our core expertise</h2>
+          <p class="lead">
+            Modern stacks we use to ship durable products — from APIs and mobile pipelines to
+            interactive systems.
+          </p>
+        </div>
         <div class="expertise-grid">
-          <div class="expertise-item">
+          <div>
             <span class="expertise-label">Backend</span>
             <ul class="expertise-list">
               <li>Spring Boot</li>
@@ -87,7 +115,7 @@
               <li>Data architecture</li>
             </ul>
           </div>
-          <div class="expertise-item">
+          <div>
             <span class="expertise-label">Mobile</span>
             <ul class="expertise-list">
               <li>Flutter</li>
@@ -95,7 +123,7 @@
               <li>iOS / Android pipelines</li>
             </ul>
           </div>
-          <div class="expertise-item">
+          <div>
             <span class="expertise-label">Interactive</span>
             <ul class="expertise-list">
               <li>Godot</li>
@@ -107,91 +135,105 @@
       </section>
 
       <section id="process" class="container section">
-        <h2>How we work</h2>
+        <div class="section-intro">
+          <h2>How we work</h2>
+        </div>
         <div class="timeline">
           <div>
-            <h3>1. Discovery</h3>
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3>Discovery</h3>
             <p>Align on business goals, technical constraints, and product priorities.</p>
           </div>
           <div>
-            <h3>2. Build</h3>
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3>Build</h3>
             <p>Ship in milestones with frequent demos, transparent updates, and clean code.</p>
           </div>
           <div>
-            <h3>3. Launch and Improve</h3>
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3>Launch &amp; improve</h3>
             <p>Deploy confidently and iterate with analytics-driven improvements.</p>
           </div>
         </div>
       </section>
 
       <section id="work" class="container section">
-        <h2>Featured Work</h2>
-        <p class="lead">
-          Representative engagements that reflect how we approach scale, mobile quality, and
-          interactive systems.
-        </p>
-        <div class="grid">
-          <article class="card card-interactive">
-            <p class="eyebrow">Backend</p>
-            <h3>Enterprise Scale Backend</h3>
-            <p>
-              High-performance API development and data architecture for systems that need
-              reliability under load and clear domain boundaries.
-            </p>
+        <div class="section-intro">
+          <h2>Featured work</h2>
+          <p class="lead">
+            Representative engagements that reflect how we approach scale, mobile quality, and
+            interactive systems.
+          </p>
+        </div>
+        <div class="work-list">
+          <article class="work-row">
+            <p class="work-tag">Backend</p>
+            <div>
+              <h3>Enterprise-scale APIs</h3>
+              <p>
+                High-performance API development and data architecture for systems that need
+                reliability under load and clear domain boundaries.
+              </p>
+            </div>
           </article>
-          <article class="card card-interactive">
-            <p class="eyebrow">Mobile</p>
-            <h3>Cross-Platform Mobile App</h3>
-            <p>
-              Intuitive UX and robust CI/CD release pipelines — shipping polished apps across
-              platforms with predictable, repeatable releases.
-            </p>
+          <article class="work-row">
+            <p class="work-tag">Mobile</p>
+            <div>
+              <h3>Cross-platform apps</h3>
+              <p>
+                Intuitive UX and robust CI/CD release pipelines — shipping polished apps across
+                platforms with predictable, repeatable releases.
+              </p>
+            </div>
           </article>
-          <article class="card card-interactive">
-            <p class="eyebrow">Interactive</p>
-            <h3>Interactive Mobile Systems</h3>
-            <p>
-              Custom mechanics and high-performance cross-platform engine deployment for
-              responsive, production-ready interactive experiences.
-            </p>
+          <article class="work-row">
+            <p class="work-tag">Interactive</p>
+            <div>
+              <h3>Interactive mobile systems</h3>
+              <p>
+                Custom mechanics and high-performance cross-platform engine deployment for
+                responsive, production-ready experiences.
+              </p>
+            </div>
           </article>
         </div>
       </section>
 
       <section id="products" class="container section">
-        <h2>Our products</h2>
-        <p class="lead">
-          Free tools we build and ship ourselves — starting with CaptionBake for Mac.
-        </p>
-        <div class="grid">
-          <article class="card card-interactive">
-            <p class="eyebrow">macOS</p>
-            <h3>CaptionBake</h3>
-            <p>
-              Style captions live and burn them into video offline. Free for Apple Silicon and
-              Intel Macs — tips optional.
+        <div class="strip">
+          <div>
+            <h2>CaptionBake</h2>
+            <p class="lead">
+              Style captions live and burn them into video offline. Free for Apple Silicon and Intel
+              Macs.
             </p>
-            <p>
-              <a class="button" href="captionbake/">Download CaptionBake</a>
-            </p>
-          </article>
+          </div>
+          <div class="strip-actions">
+            <a class="button" href="captionbake/">Download CaptionBake</a>
+          </div>
         </div>
       </section>
 
       <section id="games" class="container section">
-        <h2>Our games</h2>
-        <p class="lead">
-          We also ship our own mobile games — from offline multiplayer card tables to cozy idle
-          merge play.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="games/">Browse games</a>
+        <div class="strip">
+          <div>
+            <h2>Our games</h2>
+            <p class="lead">
+              Mobile games we ship ourselves — offline multiplayer card tables to cozy idle merge
+              play.
+            </p>
+          </div>
+          <div class="strip-actions">
+            <a class="button button-secondary" href="games/">Browse games</a>
+          </div>
         </div>
       </section>
 
       <section id="contact" class="container section contact-card">
-        <h2>Contact</h2>
-        <p>Have a project in mind? Tell us a bit about it and we will follow up.</p>
+        <h2>Let’s build something</h2>
+        <p class="lead" style="margin-bottom: 0">
+          Have a project in mind? Tell us a bit about it and we will follow up.
+        </p>
 
         <div class="contact-layout">
           <form class="contact-form" id="contact-form" novalidate>
@@ -204,7 +246,7 @@
               <input type="email" name="email" id="contact-email" autocomplete="email" required />
             </label>
             <label class="field">
-              <span>Project Brief</span>
+              <span>Project brief</span>
               <textarea
                 name="brief"
                 id="contact-brief"
@@ -213,7 +255,7 @@
                 placeholder="Goals, timeline, and any technical constraints…"
               ></textarea>
             </label>
-            <button class="button" type="submit">Submit Query</button>
+            <button class="button" type="submit">Submit inquiry</button>
           </form>
 
           <div class="contact-aside">
@@ -236,6 +278,26 @@
 
     <script>
       (function () {
+        var year = document.getElementById("year");
+        if (year) year.textContent = String(new Date().getFullYear());
+
+        var toggle = document.querySelector(".nav-toggle");
+        var nav = document.getElementById("site-nav");
+        if (toggle && nav) {
+          toggle.addEventListener("click", function () {
+            var open = nav.classList.toggle("is-open");
+            toggle.setAttribute("aria-expanded", open ? "true" : "false");
+            toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+          });
+          nav.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              nav.classList.remove("is-open");
+              toggle.setAttribute("aria-expanded", "false");
+              toggle.setAttribute("aria-label", "Open menu");
+            });
+          });
+        }
+
         var form = document.getElementById("contact-form");
         if (!form) return;
 

@@ -1,4 +1,4 @@
-/* CaptionBake product page — light accents on Core Logic site shell */
+/* CaptionBake product page — light studio accents */
 
 .meta {
   margin: 1rem 0 0;
@@ -7,7 +7,7 @@
 }
 
 .meta a {
-  color: var(--brand-soft);
+  color: var(--accent-strong);
 }
 
 .brand-row {
@@ -20,30 +20,40 @@
 .brand-row img {
   width: 56px;
   height: 56px;
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-captionbake {
+  min-height: auto;
+  padding-top: clamp(3rem, 8vh, 5rem);
+}
+
+.hero-captionbake h1 {
+  max-width: none;
 }
 
 .hero-captionbake-grid {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
 }
 
 @media (min-width: 860px) {
   .hero-captionbake-grid {
     grid-template-columns: 0.95fr 1.05fr;
-    gap: 2.5rem;
+    gap: 3rem;
   }
 }
 
 .hero-shot {
   margin: 0;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   border: 1px solid var(--border);
-  background: #05070b;
-  box-shadow: 0 24px 60px rgb(0 0 0 / 35%);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
 }
 
 .hero-shot img {
@@ -55,13 +65,7 @@
 
 .shot-gallery {
   display: grid;
-  gap: 1.5rem;
-}
-
-@media (min-width: 860px) {
-  .shot-gallery {
-    grid-template-columns: 1fr;
-  }
+  gap: 2rem;
 }
 
 .shot {
@@ -72,13 +76,14 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border: 1px solid var(--border);
-  background: #111;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
 }
 
 .shot figcaption {
-  margin-top: 0.65rem;
+  margin-top: 0.75rem;
   color: var(--muted);
   font-size: 0.95rem;
 }

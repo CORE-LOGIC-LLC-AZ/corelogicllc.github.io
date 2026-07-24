@@ -18,30 +18,38 @@
     <link rel="stylesheet" href="../../assets/css/styles.css" />
     <style>
       :root {
-        --peerdeck-emerald: #10b981;
-        --peerdeck-indigo: #6366f1;
+        --peerdeck-emerald: #0d9f6e;
+        --peerdeck-indigo: #4f46e5;
+      }
+
+      .hero-peerdeck {
+        min-height: auto;
       }
 
       .hero-peerdeck .eyebrow {
         color: var(--peerdeck-emerald);
       }
 
+      .hero-peerdeck h1 {
+        max-width: none;
+      }
+
       .hero-peerdeck-grid {
         display: grid;
-        gap: 2rem;
+        gap: 2.5rem;
         align-items: center;
       }
 
       @media (min-width: 860px) {
         .hero-peerdeck-grid {
           grid-template-columns: 1.05fr 0.95fr;
-          gap: 2.5rem;
+          gap: 3rem;
         }
       }
 
       .tagline {
         color: var(--muted);
-        font-size: 1.15rem;
+        font-size: 1.12rem;
         max-width: 52ch;
       }
 
@@ -55,17 +63,18 @@
       .brand-row img {
         width: 56px;
         height: 56px;
-        border-radius: 14px;
+        border-radius: 12px;
         border: 1px solid var(--border);
+        box-shadow: var(--shadow-soft);
       }
 
       .hero-shot {
         margin: 0;
-        border-radius: 1.25rem;
+        border-radius: 0.5rem;
         overflow: hidden;
         border: 1px solid var(--border);
-        background: #05070b;
-        box-shadow: 0 24px 60px rgb(0 0 0 / 35%);
+        background: var(--surface);
+        box-shadow: var(--shadow-soft);
       }
 
       .hero-shot img {
@@ -76,8 +85,9 @@
       }
 
       .feature-list {
-        margin: 0;
+        margin: 0.75rem 0 0;
         padding-left: 1.2rem;
+        color: var(--muted);
       }
 
       .feature-list li {
@@ -86,14 +96,14 @@
 
       .game-badge {
         display: inline-block;
-        background: rgb(99 102 241 / 18%);
+        background: rgb(79 70 229 / 8%);
         color: var(--peerdeck-indigo);
-        border: 1px solid rgb(99 102 241 / 35%);
-        border-radius: 999px;
-        padding: 0.2rem 0.65rem;
-        font-size: 0.8rem;
+        border: 1px solid rgb(79 70 229 / 22%);
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.65rem;
+        font-size: 0.75rem;
         font-weight: 600;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
       }
 
@@ -109,6 +119,7 @@
         margin-bottom: 0.9rem;
         padding-left: 2.4rem;
         position: relative;
+        color: var(--muted);
       }
 
       .steps li::before {
@@ -155,15 +166,21 @@
         display: block;
         width: 100%;
         height: auto;
-        border-radius: 1.4rem;
+        border-radius: 1rem;
         border: 1px solid var(--border);
-        background: #111;
+        background: var(--surface);
+        box-shadow: var(--shadow-soft);
       }
 
       .phone figcaption {
         margin-top: 0.65rem;
         color: var(--muted);
         font-size: 0.95rem;
+      }
+
+      .panel {
+        padding-top: 1.15rem;
+        border-top: 1px solid var(--border-strong);
       }
     </style>
   </head>
@@ -173,13 +190,24 @@
         <a href="../../index.html" class="brand" aria-label="Core Logic LLC home">
           <img
             class="brand-lockup"
-            src="../../assets/icons/corelogic-logo.svg"
+            src="../../assets/icons/corelogic-logo-on-light.png"
             alt="Core Logic logo"
             width="250"
             height="44"
           />
         </a>
-        <nav aria-label="Main navigation">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="#features">Features</a></li>
             <li><a href="#gallery">Gallery</a></li>
@@ -290,23 +318,25 @@
       </section>
 
       <section id="features" class="container section">
-        <h2>Built for real-world gatherings</h2>
-        <div class="grid">
-          <article class="card">
+        <div class="section-intro">
+          <h2>Built for real-world gatherings</h2>
+        </div>
+        <div class="offer-grid">
+          <article class="offer-item">
             <h3>True offline autonomy</h3>
             <p>
               Fully operational in dead-zones, airplanes, subways, or remote trips — no cellular
               data, Wi‑Fi router, or online account required.
             </p>
           </article>
-          <article class="card">
+          <article class="offer-item">
             <h3>Hardware-to-hardware</h3>
             <p>
               Nearby devices discover each other automatically over Apple's Multipeer Connectivity
               framework using local Wi‑Fi and Bluetooth.
             </p>
           </article>
-          <article class="card">
+          <article class="offer-item">
             <h3>Premium card-table UX</h3>
             <p>
               A dark, tactile interface built natively with SwiftUI — low-latency sync, haptic
@@ -317,17 +347,22 @@
       </section>
 
       <section id="how-it-works" class="container section">
-        <h2>How it works</h2>
+        <div class="section-intro">
+          <h2>How it works</h2>
+        </div>
         <div class="timeline">
           <div>
+            <span class="step-num" aria-hidden="true">01</span>
             <h3>Host a table</h3>
             <p>Tap <strong>Host Table</strong> on one device to start a session and share a room code.</p>
           </div>
           <div>
+            <span class="step-num" aria-hidden="true">02</span>
             <h3>Join locally</h3>
             <p>Other players tap <strong>Join Table</strong>, pick a nearby host, and enter the code.</p>
           </div>
           <div>
+            <span class="step-num" aria-hidden="true">03</span>
             <h3>Play in sync</h3>
             <p>The host selects a game module and every device stays synchronized for the round.</p>
           </div>
@@ -335,12 +370,14 @@
       </section>
 
       <section class="container section">
-        <h2>Launch games</h2>
-        <div class="grid">
-          <article class="card">
+        <div class="section-intro">
+          <h2>Launch games</h2>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))">
+          <article class="panel">
             <p><span class="game-badge">Trick-taking · 4, 6, or 8 players</span></p>
             <h3>28 (Thuruppu)</h3>
-            <p>
+            <p style="color: var(--muted)">
               Classic South Asian card game. Players sit in partnerships, bid on tricks, and set a
               hidden trump suit. The round dealer rotates each hand; bidding opens at the seat after
               the dealer.
@@ -350,10 +387,10 @@
               <li>Host-authoritative state sync for fair, in-person play</li>
             </ul>
           </article>
-          <article class="card">
+          <article class="panel">
             <p><span class="game-badge">Color match · 2–10 players</span></p>
             <h3>One</h3>
-            <p>
+            <p style="color: var(--muted)">
               Fast color-matching party game for the whole table. Match color or value, use action
               cards to skip and reverse, and shout <strong>ONE!</strong> when you are down to a
               single card.
@@ -370,9 +407,11 @@
       </section>
 
       <section class="container section">
-        <h2>Free to play</h2>
-        <div class="card">
-          <ul class="feature-list">
+        <div class="section-intro">
+          <h2>Free to play</h2>
+        </div>
+        <div class="panel">
+          <ul class="feature-list" style="margin: 0">
             <li>PeerDeck is free — no in-app purchases in this version</li>
             <li>
               Light banner ads may appear on the dashboard, lobby, and game selection screens when
@@ -388,8 +427,10 @@
       </section>
 
       <section class="container section">
-        <h2>Get started</h2>
-        <div class="card">
+        <div class="section-intro">
+          <h2>Get started</h2>
+        </div>
+        <div class="panel">
           <ol class="steps">
             <li>Tap <strong>Host Table</strong> on one device to start a session</li>
             <li>Other players tap <strong>Join Table</strong> to find nearby hosts</li>
@@ -416,5 +457,18 @@
         <a href="../../index.html">Core Logic LLC</a>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        var toggle = document.querySelector(".nav-toggle");
+        var nav = document.getElementById("site-nav");
+        if (!toggle || !nav) return;
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        });
+      })();
+    </script>
   </body>
 </html>
