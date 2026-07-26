@@ -6,7 +6,7 @@
     <title>ReelDispatch | Core Logic LLC</title>
     <meta
       name="description"
-      content="ReelDispatch is a local-first desktop app from Core Logic LLC that cross-posts short-form MP4s to YouTube Shorts, TikTok, and Instagram Reels — with scheduling, tray queue, and a localhost API."
+      content="ReelDispatch is a local-first desktop app that cross-posts short-form MP4s to YouTube Shorts, TikTok, and Instagram Reels — with JSON metadata sidecars, scheduling, a tray queue, and a localhost API."
     />
     <meta property="og:title" content="ReelDispatch" />
     <meta
@@ -96,7 +96,7 @@
           <article class="feature-card">
             <h3>One compose → three platforms</h3>
             <p>
-              Pick an MP4, set captions and per-account overrides, and enqueue uploads to connected
+              Import one or many MP4s, set each video’s copy, and enqueue uploads to connected
               YouTube, TikTok, and Instagram accounts.
             </p>
           </article>
@@ -118,14 +118,18 @@
             <h3>Local API &amp; MCP</h3>
             <p>
               Optional localhost HTTP API and MCP adapter so generation scripts can queue videos
-              without opening the UI.
+              without opening the UI. Matching JSON sidecars carry generated copy and schedules.
+              <a
+                href="https://github.com/CORE-LOGIC-LLC-AZ/reel-dispatch/blob/main/docs/VIDEO_METADATA_SIDECAR.md"
+                >View the sidecar format</a
+              >.
             </p>
           </article>
           <article class="feature-card">
             <h3>Watched folder</h3>
             <p>
-              Drop finished exports into a folder; stable files are ingested with your default
-              caption and accounts.
+              Drop finished exports into a folder. Add a same-name JSON file to supply the title,
+              caption, first comment, and schedule automatically.
             </p>
           </article>
           <article class="feature-card">
@@ -151,7 +155,10 @@
           <div>
             <span class="step-num" aria-hidden="true">02</span>
             <h3>Compose &amp; queue</h3>
-            <p>Import one or many MP4s, validate with FFmpeg, set captions, schedule if needed, and enqueue.</p>
+            <p>
+              Import MP4s, optionally pair each with a same-name JSON metadata file, validate with
+              FFmpeg, and enqueue.
+            </p>
           </div>
           <div>
             <span class="step-num" aria-hidden="true">03</span>
