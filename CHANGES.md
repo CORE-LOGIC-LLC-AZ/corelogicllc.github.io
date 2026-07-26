@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### feat/reeldispatch-jira-triage-note
+
+- Noted on the ReelDispatch feedback section that reported bugs are triaged internally in Jira.
+
 ### feat/reeldispatch-feedback-links
 
 - Linked ReelDispatch product, privacy, and terms pages to the public `reel-dispatch-public` GitHub discussions/issues for feature requests and bug reports.
