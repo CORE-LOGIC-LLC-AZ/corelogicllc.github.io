@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### feat/reeldispatch-product-pages
+
+- Added ReelDispatch product marketing page, privacy policy, and terms under `reeldispatch/`.
+- Linked ReelDispatch from the homepage nav/products strip, CaptionBake nav, and Games nav.
+- Published app icon assets for TikTok / store use.
+
 ### release/captionbake-arm64-only
 
 - CaptionBake public downloads are Apple Silicon only; removed the Intel (x86_64) download button and config entry.

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReelDispatch Privacy Policy | Core Logic LLC</title>
+    <meta
+      name="description"
+      content="Privacy policy for ReelDispatch — local-first short-form cross-poster. Tokens in OS keychain, optional Lemon Squeezy licensing, OAuth via platform APIs and a minimal broker."
+    />
+    <link rel="icon" type="image/png" href="images/icon-128.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260724" />
+    <link rel="stylesheet" href="reeldispatch.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="brand" aria-label="Core Logic LLC home">
+          <img
+            class="brand-lockup"
+            src="../assets/icons/corelogic-logo-on-light.png?v=20260724"
+            alt="Core Logic logo"
+            width="250"
+            height="44"
+          />
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">ReelDispatch</a></li>
+            <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <p class="eyebrow">ReelDispatch</p>
+      <h1>Privacy Policy</h1>
+      <p class="policy-meta">
+        Effective date: July 25, 2026 · Published by Core Logic LLC<br />
+        App bundle ID: <code>cc.corelogic.reeldispatch</code>
+      </p>
+
+      <div class="card policy-body">
+        <p>
+          ReelDispatch is a desktop application from Core Logic LLC (“we,” “us”) that helps you
+          upload local video files to YouTube, TikTok, and Instagram. This policy describes how
+          information is handled when you use the app and related product pages.
+        </p>
+
+        <h2>Summary</h2>
+        <ul>
+          <li>Video files you select stay on your computer unless you upload them to a platform</li>
+          <li>OAuth tokens are stored in your operating system keychain / credential store</li>
+          <li>Job history and settings are stored in a local SQLite database on your device</li>
+          <li>We do <strong>not</strong> sell your personal data</li>
+          <li>Platform uploads are sent directly to YouTube / TikTok / Meta APIs (or via our OAuth broker for TikTok/Meta login only)</li>
+          <li>Licensing may contact Lemon Squeezy to activate or validate a license key</li>
+        </ul>
+
+        <h2>Information stored on your device</h2>
+        <p>ReelDispatch stores on your machine:</p>
+        <ul>
+          <li>Account metadata (platform, display name, avatar URL if provided by the platform)</li>
+          <li>OAuth access and refresh tokens in the OS secure store</li>
+          <li>Upload job queue, captions, schedule times, and status history in local SQLite</li>
+          <li>App settings (for example local API enablement, watched folder path, tray preferences)</li>
+          <li>A local API bearer token in the OS secure store when you enable the localhost API</li>
+        </ul>
+        <p>
+          We do not operate a cloud database of your videos or captions. Clearing the app data or
+          uninstalling removes local storage according to your OS.
+        </p>
+
+        <h2>OAuth and platform services</h2>
+        <p>
+          When you connect an account, ReelDispatch uses OAuth 2.0. You authorize the app to
+          upload and manage content on your behalf within the scopes shown by Google, TikTok, or
+          Meta.
+        </p>
+        <ul>
+          <li>
+            <strong>YouTube:</strong> authorization and token exchange with Google using our Desktop
+            OAuth client. Tokens remain on your device.
+          </li>
+          <li>
+            <strong>TikTok &amp; Instagram:</strong> login may go through a minimal Cloudflare Worker
+            OAuth broker operated by Core Logic LLC. The broker holds provider client secrets and
+            helps complete the authorization code exchange. It is designed not to retain your
+            long-lived platform tokens; those are returned to the desktop app for keychain storage.
+          </li>
+        </ul>
+        <p>
+          After connection, upload traffic goes from your computer to the respective platform APIs.
+          Those platforms process your content under their own privacy policies.
+        </p>
+
+        <h2>Licensing (Lemon Squeezy)</h2>
+        <p>
+          If you activate a paid license, ReelDispatch may send your license key and a device
+          instance identifier to Lemon Squeezy to activate or validate the license. Lemon Squeezy
+          handles payment and license records under their policies. We do not receive your full
+          payment card details in the desktop app.
+        </p>
+
+        <h2>Localhost API</h2>
+        <p>
+          If you enable the local HTTP API, it binds to localhost only and requires a bearer token
+          stored on your device. Requests and paths you send to that API stay on your machine unless
+          you intentionally point external tools at it.
+        </p>
+
+        <h2>Website</h2>
+        <p>
+          Visiting <a href="https://www.corelogic.cc/reeldispatch/">www.corelogic.cc/reeldispatch</a>
+          may produce standard web server or CDN logs (IP address, user agent, pages requested). We
+          do not use the product pages to run advertising trackers for ReelDispatch.
+        </p>
+
+        <h2>Data we do not collect</h2>
+        <ul>
+          <li>Your video files into Core Logic LLC cloud storage</li>
+          <li>Advertising IDs for third-party ads inside the desktop app</li>
+          <li>Sale of personal information to data brokers</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>
+          ReelDispatch is not directed to children under 13. We do not knowingly collect personal
+          information from children.
+        </p>
+
+        <h2>Changes</h2>
+        <p>
+          We may update this policy as the product evolves. The effective date at the top will
+          change when we publish a revision on this page.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Privacy questions about ReelDispatch:
+          <a href="mailto:admin@corelogic.cc">admin@corelogic.cc</a>
+          (include “ReelDispatch Privacy” in the subject).
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year">2026</span> Core Logic LLC. All rights reserved.</p>
+        <a href="index.html">ReelDispatch</a>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
