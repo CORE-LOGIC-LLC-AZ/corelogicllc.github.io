@@ -138,6 +138,90 @@ a:hover {
   color: var(--accent-strong);
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-dropdown-toggle::after {
+  content: "";
+  width: 0.35rem;
+  height: 0.35rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-1px) rotate(45deg);
+  opacity: 0.7;
+}
+
+.nav-dropdown-toggle:hover,
+.nav-dropdown.is-open > .nav-dropdown-toggle,
+.nav-dropdown.has-current > .nav-dropdown-toggle {
+  color: var(--accent-strong);
+}
+
+.nav-submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem 0;
+  min-width: 11.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.45rem;
+  background: var(--surface, #fff);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (min-width: 901px) {
+  .nav-submenu {
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    left: 0;
+    z-index: 40;
+    display: none;
+  }
+
+  .nav-dropdown.is-open > .nav-submenu {
+    display: block;
+  }
+}
+
+.nav-submenu a {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.9rem;
+  white-space: nowrap;
+}
+
+.nav-submenu a img {
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.nav-submenu a:hover,
+.nav-submenu a[aria-current="page"] {
+  color: var(--accent-strong);
+}
+
 /* —— Type —— */
 .eyebrow {
   color: var(--accent-strong);
@@ -770,6 +854,23 @@ h3 {
   .nav-list {
     flex-direction: column;
     gap: 0.65rem;
+  }
+
+  .nav-submenu {
+    display: none;
+    margin: 0.35rem 0 0.15rem 0.75rem;
+    padding: 0.25rem 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .nav-dropdown.is-open > .nav-submenu {
+    display: block;
+  }
+
+  .nav-submenu a {
+    padding: 0.35rem 0;
   }
 
   .brand-lockup {

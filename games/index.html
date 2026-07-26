@@ -9,7 +9,7 @@
       content="Mobile games from Core Logic LLC — PeerDeck offline card games and Capy Merge Spa."
     />
     <link rel="icon" type="image/png" href="../assets/icons/corelogic-icon.png?v=20260724" />
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260724b" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260726a" />
   </head>
   <body>
     <header class="site-header">
@@ -37,9 +37,31 @@
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="../index.html">Home</a></li>
+            <li class="nav-dropdown">
+              <button
+                type="button"
+                class="nav-dropdown-toggle"
+                aria-expanded="false"
+                aria-controls="products-menu"
+              >
+                Products
+              </button>
+              <ul id="products-menu" class="nav-submenu">
+                <li>
+                  <a href="../captionbake/">
+                    <img src="../captionbake/images/icon.png" width="22" height="22" alt="" />
+                    CaptionBake
+                  </a>
+                </li>
+                <li>
+                  <a href="../reeldispatch/">
+                    <img src="../reeldispatch/images/icon.png" width="22" height="22" alt="" />
+                    ReelDispatch
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li><a href="index.html" aria-current="page">Games</a></li>
-            <li><a href="../captionbake/">CaptionBake</a></li>
-            <li><a href="../reeldispatch/">ReelDispatch</a></li>
           </ul>
         </nav>
       </div>
@@ -104,17 +126,6 @@
       </div>
     </footer>
 
-    <script>
-      (function () {
-        var toggle = document.querySelector(".nav-toggle");
-        var nav = document.getElementById("site-nav");
-        if (!toggle || !nav) return;
-        toggle.addEventListener("click", function () {
-          var open = nav.classList.toggle("is-open");
-          toggle.setAttribute("aria-expanded", open ? "true" : "false");
-          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-        });
-      })();
-    </script>
+    <script src="../assets/js/site-nav.js"></script>
   </body>
 </html>

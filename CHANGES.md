@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### feat/products-nav-dropdown
+
+- Replaced per-product top-bar links with a **Products** dropdown (CaptionBake, ReelDispatch) on Home, product pages, and Games.
+- Added shared `assets/js/site-nav.js` for hamburger + dropdown behavior.
+- Clarified ReelDispatch Free vs Pro on the product page, privacy policy, and terms (including pricing compare and early-access copy).
+
 ### feat/reeldispatch-product-pages
 
 - Added ReelDispatch product marketing page, privacy policy, and terms under `reeldispatch/`.
