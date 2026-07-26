@@ -6,16 +6,16 @@
     <title>ReelDispatch | Core Logic LLC</title>
     <meta
       name="description"
-      content="ReelDispatch is a local-first desktop app that cross-posts short-form MP4s to YouTube Shorts, TikTok, and Instagram Reels — with JSON metadata sidecars, scheduling, a tray queue, and a localhost API."
+      content="ReelDispatch is a local-first desktop app that cross-posts short-form MP4s to YouTube Shorts, TikTok, and Instagram Reels. Free tier included; Pro unlocks scheduling, local API, folder watch, and more."
     />
     <meta property="og:title" content="ReelDispatch" />
     <meta
       property="og:description"
-      content="Cross-post Shorts, TikTok, and Reels from your Mac. Local queue, secure tokens, optional localhost API."
+      content="Cross-post Shorts, TikTok, and Reels from your Mac. Free to start — Pro for scheduling, automation API, and watched folders."
     />
     <meta property="og:image" content="images/icon.png" />
     <link rel="icon" type="image/png" href="images/icon-128.png" />
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260724" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260726a" />
     <link rel="stylesheet" href="reeldispatch.css" />
   </head>
   <body>
@@ -44,8 +44,30 @@
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
           <ul class="nav-list">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../captionbake/">CaptionBake</a></li>
-            <li><a href="index.html" aria-current="page">ReelDispatch</a></li>
+            <li class="nav-dropdown has-current">
+              <button
+                type="button"
+                class="nav-dropdown-toggle"
+                aria-expanded="false"
+                aria-controls="products-menu"
+              >
+                Products
+              </button>
+              <ul id="products-menu" class="nav-submenu">
+                <li>
+                  <a href="../captionbake/">
+                    <img src="../captionbake/images/icon.png" width="22" height="22" alt="" />
+                    CaptionBake
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html" aria-current="page">
+                    <img src="images/icon.png" width="22" height="22" alt="" />
+                    ReelDispatch
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li><a href="../games/">Games</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
           </ul>
@@ -64,12 +86,12 @@
             <h1>ReelDispatch</h1>
             <p class="lead">
               Upload once, publish to <strong>YouTube Shorts</strong>, <strong>TikTok</strong>, and
-              <strong>Instagram Reels</strong>. Local-first queue, OS keychain tokens, scheduling
-              while the app (or tray) is running, and a localhost API for automation pipelines.
+              <strong>Instagram Reels</strong>. Local-first queue and OS keychain tokens — free to
+              start, with Pro for scheduling, folder automation, and a localhost API.
             </p>
             <div class="hero-actions">
               <a class="button" href="../index.html#contact">Get early access</a>
-              <a class="button button-secondary" href="privacy.html">Privacy policy</a>
+              <a class="button button-secondary" href="#pricing">Free &amp; Pro</a>
             </div>
             <p class="meta">
               macOS (Windows &amp; Linux planned) · Local SQLite · FFmpeg validation ·
@@ -96,11 +118,12 @@
           <article class="feature-card">
             <h3>One compose → three platforms</h3>
             <p>
-              Import one or many MP4s, set each video’s copy, and enqueue uploads to connected
-              YouTube, TikTok, and Instagram accounts.
+              Import MP4s, set each video’s copy, and publish to connected YouTube, TikTok, and
+              Instagram accounts. Free includes one account per platform.
             </p>
           </article>
           <article class="feature-card">
+            <p class="plan-tag">Pro</p>
             <h3>Schedule &amp; tray queue</h3>
             <p>
               Schedule posts for later. Minimize to tray so the worker keeps running. Pause and
@@ -108,6 +131,7 @@
             </p>
           </article>
           <article class="feature-card">
+            <p class="plan-tag">Pro</p>
             <h3>First comments</h3>
             <p>
               After a successful YouTube or Instagram publish, optionally post your first comment
@@ -115,6 +139,7 @@
             </p>
           </article>
           <article class="feature-card">
+            <p class="plan-tag">Pro</p>
             <h3>Local API &amp; MCP</h3>
             <p>
               Optional localhost HTTP API and MCP adapter so generation scripts can queue videos
@@ -126,20 +151,57 @@
             </p>
           </article>
           <article class="feature-card">
-            <h3>Watched folder</h3>
+            <p class="plan-tag">Pro</p>
+            <h3>Watched folder &amp; sidecars</h3>
             <p>
               Drop finished exports into a folder. Add a same-name JSON file to supply the title,
               caption, first comment, and schedule automatically.
             </p>
           </article>
           <article class="feature-card">
-            <h3>Licensed desktop product</h3>
+            <h3>Free &amp; Pro on your machine</h3>
             <p>
-              Lemon Squeezy licensing for monthly or lifetime Pro. Tokens and license keys stay on
-              your device.
+              Start on Free with no license key. Unlock Pro via Lemon Squeezy (monthly or lifetime).
+              Tokens and license keys stay on your device.
             </p>
           </article>
         </div>
+      </section>
+
+      <section id="pricing" class="container section">
+        <div class="section-intro">
+          <h2>Free &amp; Pro</h2>
+          <p class="lead">
+            Use ReelDispatch without buying anything. Upgrade when you need automation and higher
+            volume.
+          </p>
+        </div>
+        <div class="pricing-compare">
+          <div class="pricing-col">
+            <h3>Free</h3>
+            <ul>
+              <li>1 account per platform (YouTube, TikTok, Instagram)</li>
+              <li>10 video publishes per month</li>
+              <li>Publish Now (manual enqueue)</li>
+              <li>MP4 import</li>
+            </ul>
+          </div>
+          <div class="pricing-col pricing-col-pro">
+            <h3>Pro</h3>
+            <ul>
+              <li>Unlimited accounts &amp; profiles</li>
+              <li>Unlimited publishes</li>
+              <li>Full queue &amp; background scheduling</li>
+              <li>Local API (<code>127.0.0.1</code>) &amp; MCP</li>
+              <li>Watched folder &amp; JSON sidecars</li>
+              <li>Automated first comments (YouTube &amp; Instagram)</li>
+            </ul>
+          </div>
+        </div>
+        <p class="meta" style="margin-top: 1.25rem">
+          Checkout links will ship with the public release. For early access or partnership:
+          <a href="mailto:admin@corelogic.cc?subject=ReelDispatch%20Pro">email us</a>.
+        </p>
       </section>
 
       <section id="how" class="container section">
@@ -150,29 +212,35 @@
           <div>
             <span class="step-num" aria-hidden="true">01</span>
             <h3>Connect accounts</h3>
-            <p>OAuth into YouTube, TikTok, and Instagram. Secrets for TikTok/Meta stay in our broker — never in the binary.</p>
+            <p>
+              OAuth into YouTube, TikTok, and Instagram. Secrets for TikTok/Meta stay in our broker —
+              never in the binary. Free allows one account per platform.
+            </p>
           </div>
           <div>
             <span class="step-num" aria-hidden="true">02</span>
-            <h3>Compose &amp; queue</h3>
+            <h3>Compose &amp; publish</h3>
             <p>
-              Import MP4s, optionally pair each with a same-name JSON metadata file, validate with
-              FFmpeg, and enqueue.
+              Import MP4s, validate with FFmpeg, and Publish Now on Free. Pro adds JSON sidecars,
+              scheduling, watched-folder ingest, and API/MCP enqueue.
             </p>
           </div>
           <div>
             <span class="step-num" aria-hidden="true">03</span>
             <h3>Dispatch</h3>
-            <p>The background worker uploads while you keep working — or while the app sits in the tray.</p>
+            <p>
+              The background worker uploads while you keep working — or, on Pro, while the app sits
+              in the tray with scheduled posts.
+            </p>
           </div>
         </div>
       </section>
 
       <section class="container section contact-card">
-        <h2>Coming soon</h2>
+        <h2>Early access</h2>
         <p class="lead" style="margin-bottom: 1rem">
-          ReelDispatch is in active development. Want a DMG when it ships, or a partnership
-          conversation? Email us.
+          Freemium Free/Pro is built into the app. Want a DMG when public builds ship, or a
+          partnership conversation? Email us.
         </p>
         <a class="button" href="mailto:admin@corelogic.cc?subject=ReelDispatch%20interest"
           >Contact Core Logic LLC</a
@@ -191,18 +259,6 @@
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = String(new Date().getFullYear());
-      (function () {
-        var toggle = document.querySelector(".nav-toggle");
-        var nav = document.getElementById("site-nav");
-        if (!toggle || !nav) return;
-        toggle.addEventListener("click", function () {
-          var open = nav.classList.toggle("is-open");
-          toggle.setAttribute("aria-expanded", open ? "true" : "false");
-          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-        });
-      })();
-    </script>
+    <script src="../assets/js/site-nav.js"></script>
   </body>
 </html>

@@ -6,11 +6,16 @@ Simple static website for **Core Logic LLC**, focused on software and app develo
 
 - `index.html` - Main one-page site.
 - `assets/css/styles.css` - Site styles.
+- `assets/js/site-nav.js` - Shared mobile nav + Products dropdown.
 - `assets/icons/corelogic-icon.svg` - Active brand icon and favicon (attached style).
 - `assets/icons/corelogic-logo.svg` - Full logo lockup used in the header.
 - `captionbake/` - CaptionBake product page and macOS downloaders.
 - `reeldispatch/` - ReelDispatch product page, privacy policy, and terms.
 - `games/` - Games hub and per-game pages.
+
+## Products nav
+
+Top-level **Products** dropdown lists product pages (CaptionBake, ReelDispatch). Add new products there instead of as separate top-bar links.
 
 ## Run locally
 
