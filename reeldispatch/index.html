@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReelDispatch | Core Logic LLC</title>
+    <meta
+      name="description"
+      content="ReelDispatch is a local-first desktop app from Core Logic LLC that cross-posts short-form MP4s to YouTube Shorts, TikTok, and Instagram Reels — with scheduling, tray queue, and a localhost API."
+    />
+    <meta property="og:title" content="ReelDispatch" />
+    <meta
+      property="og:description"
+      content="Cross-post Shorts, TikTok, and Reels from your Mac. Local queue, secure tokens, optional localhost API."
+    />
+    <meta property="og:image" content="images/icon.png" />
+    <link rel="icon" type="image/png" href="images/icon-128.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260724" />
+    <link rel="stylesheet" href="reeldispatch.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="../index.html" class="brand" aria-label="Core Logic LLC home">
+          <img
+            class="brand-lockup"
+            src="../assets/icons/corelogic-logo-on-light.png?v=20260724"
+            alt="Core Logic logo"
+            width="250"
+            height="44"
+          />
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../captionbake/">CaptionBake</a></li>
+            <li><a href="index.html" aria-current="page">ReelDispatch</a></li>
+            <li><a href="../games/">Games</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container hero-reeldispatch">
+        <div class="hero-reeldispatch-grid">
+          <div>
+            <div class="brand-row">
+              <img src="images/icon.png" width="56" height="56" alt="" />
+              <p class="eyebrow" style="margin: 0">Desktop cross-poster</p>
+            </div>
+            <h1>ReelDispatch</h1>
+            <p class="lead">
+              Upload once, publish to <strong>YouTube Shorts</strong>, <strong>TikTok</strong>, and
+              <strong>Instagram Reels</strong>. Local-first queue, OS keychain tokens, scheduling
+              while the app (or tray) is running, and a localhost API for automation pipelines.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="../index.html#contact">Get early access</a>
+              <a class="button button-secondary" href="privacy.html">Privacy policy</a>
+            </div>
+            <p class="meta">
+              macOS (Windows &amp; Linux planned) · Local SQLite · FFmpeg validation ·
+              <a href="privacy.html">Privacy</a> ·
+              <a href="terms.html">Terms</a> ·
+              <a href="mailto:admin@corelogic.cc">admin@corelogic.cc</a>
+            </p>
+          </div>
+          <figure class="hero-mark">
+            <img src="images/icon.png" width="1024" height="1024" alt="ReelDispatch app icon" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="features" class="container section">
+        <div class="section-intro">
+          <h2>Built for creators who already export locally</h2>
+          <p class="lead">
+            Skip the SaaS upload hop. ReelDispatch talks to platform APIs from your machine and
+            keeps credentials in the OS keychain.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>One compose → three platforms</h3>
+            <p>
+              Pick an MP4, set captions and per-account overrides, and enqueue uploads to connected
+              YouTube, TikTok, and Instagram accounts.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Schedule &amp; tray queue</h3>
+            <p>
+              Schedule posts for later. Minimize to tray so the worker keeps running. Pause and
+              resume from the tray menu.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>First comments</h3>
+            <p>
+              After a successful YouTube or Instagram publish, optionally post your first comment
+              automatically.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Local API &amp; MCP</h3>
+            <p>
+              Optional localhost HTTP API and MCP adapter so generation scripts can queue videos
+              without opening the UI.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Watched folder</h3>
+            <p>
+              Drop finished exports into a folder; stable files are ingested with your default
+              caption and accounts.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Licensed desktop product</h3>
+            <p>
+              Lemon Squeezy licensing for monthly or lifetime Pro. Tokens and license keys stay on
+              your device.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="how" class="container section">
+        <div class="section-intro">
+          <h2>How it works</h2>
+        </div>
+        <div class="timeline">
+          <div>
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3>Connect accounts</h3>
+            <p>OAuth into YouTube, TikTok, and Instagram. Secrets for TikTok/Meta stay in our broker — never in the binary.</p>
+          </div>
+          <div>
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3>Compose &amp; queue</h3>
+            <p>Import one or many MP4s, validate with FFmpeg, set captions, schedule if needed, and enqueue.</p>
+          </div>
+          <div>
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3>Dispatch</h3>
+            <p>The background worker uploads while you keep working — or while the app sits in the tray.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section contact-card">
+        <h2>Coming soon</h2>
+        <p class="lead" style="margin-bottom: 1rem">
+          ReelDispatch is in active development. Want a DMG when it ships, or a partnership
+          conversation? Email us.
+        </p>
+        <a class="button" href="mailto:admin@corelogic.cc?subject=ReelDispatch%20interest"
+          >Contact Core Logic LLC</a
+        >
+        <p class="meta" style="margin-top: 1.25rem">
+          <a href="privacy.html">Privacy policy</a> ·
+          <a href="terms.html">Terms of service</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year">2026</span> Core Logic LLC. All rights reserved.</p>
+        <a href="../index.html">Core Logic LLC</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+      (function () {
+        var toggle = document.querySelector(".nav-toggle");
+        var nav = document.getElementById("site-nav");
+        if (!toggle || !nav) return;
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        });
+      })();
+    </script>
+  </body>
+</html>

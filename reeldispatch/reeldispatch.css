@@ -1,0 +1,111 @@
+/* ReelDispatch product page — accents within Core Logic site system */
+
+.meta {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.meta a {
+  color: var(--accent-strong);
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.brand-row img {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-reeldispatch {
+  min-height: auto;
+  padding-top: clamp(3rem, 8vh, 5rem);
+}
+
+.hero-reeldispatch h1 {
+  max-width: none;
+}
+
+.hero-reeldispatch-grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .hero-reeldispatch-grid {
+    grid-template-columns: 1.05fr 0.85fr;
+    gap: 3rem;
+  }
+}
+
+.hero-mark {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-mark img {
+  width: min(280px, 70%);
+  height: auto;
+  border-radius: 28%;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 700px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.feature-card {
+  margin: 0;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.feature-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.policy-body {
+  max-width: 68ch;
+}
+
+.policy-body ul {
+  padding-left: 1.25rem;
+}
+
+.policy-body li {
+  margin-bottom: 0.6rem;
+}
+
+.policy-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
