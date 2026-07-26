@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### feat/reeldispatch-feedback-links
+
+- Linked ReelDispatch product, privacy, and terms pages to the public `reel-dispatch-public` GitHub discussions/issues for feature requests and bug reports.
+
 ### feat/products-nav-dropdown
 
 - Replaced per-product top-bar links with a **Products** dropdown (CaptionBake, ReelDispatch) on Home, product pages, and Games.
