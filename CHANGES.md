@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### fix/reeldispatch-hero-shot-size
+
+- Capped the ReelDispatch hero screenshot width to better match CaptionBake’s product-page scale.
+- Removed unused `.hero-mark` styles left over from the icon-based hero.
+
 ### feat/reeldispatch-screenshots
 
 - Added ReelDispatch product screenshots to the hero and a new “In the app” gallery on the product page.

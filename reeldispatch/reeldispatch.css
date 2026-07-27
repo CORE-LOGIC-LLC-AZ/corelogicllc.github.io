@@ -45,6 +45,11 @@
     grid-template-columns: 0.95fr 1.05fr;
     gap: 3rem;
   }
+
+  .hero-reeldispatch .hero-shot {
+    max-width: min(100%, 32rem);
+    justify-self: end;
+  }
 }
 
 .hero-shot {
@@ -86,21 +91,6 @@
   margin-top: 0.75rem;
   color: var(--muted);
   font-size: 0.95rem;
-}
-
-.hero-mark {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-mark img {
-  width: min(280px, 70%);
-  height: auto;
-  border-radius: 28%;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
 }
 
 .feature-grid {
