@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### feat/reeldispatch-screenshots
+
+- Added ReelDispatch product screenshots to the hero and a new “In the app” gallery on the product page.
+
 ### feat/reeldispatch-jira-triage-note
 
 - Noted on the ReelDispatch feedback section that reported bugs are triaged internally in Jira.
