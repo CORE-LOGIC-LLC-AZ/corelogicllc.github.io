@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### chore/captionbake-external-releases
+
+- Point CaptionBake Apple Silicon downloads at `releases.corelogic.cc` instead of hosting the DMG in this repo.
+- Keep local checksum files for the product-page Checksums link; update `downloads/README.md` for the new publish flow.
+
 ### fix/reeldispatch-hero-shot-size
 
 - Capped the ReelDispatch hero screenshot width to better match CaptionBake’s product-page scale.
