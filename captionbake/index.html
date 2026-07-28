@@ -16,7 +16,7 @@
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="../assets/css/styles.css?v=20260726a" />
-    <link rel="stylesheet" href="captionbake.css" />
+    <link rel="stylesheet" href="captionbake.css?v=20260728a" />
   </head>
   <body>
     <header class="site-header">
@@ -76,6 +76,41 @@
     </header>
 
     <main>
+      <section
+        id="purchase-thanks"
+        class="container section purchase-thanks"
+        hidden
+        aria-labelledby="purchase-thanks-title"
+      >
+        <div class="purchase-thanks-card">
+          <p class="eyebrow">Purchase complete</p>
+          <h2 id="purchase-thanks-title">Much appreciated!</h2>
+          <p class="lead">
+            Thanks for buying CaptionBake Pro. Copy your license key, then open
+            CaptionBake → <strong>Settings → License</strong> and paste it to
+            activate. If you don’t have the app yet, download it below.
+          </p>
+          <label class="license-key-label" for="license-key-value">Your license key</label>
+          <div class="license-key-row">
+            <input
+              id="license-key-value"
+              class="license-key-value"
+              type="text"
+              readonly
+              spellcheck="false"
+              autocomplete="off"
+              value=""
+            />
+            <button type="button" class="button" id="copy-license-key">Copy</button>
+          </div>
+          <p id="copy-license-status" class="license-key-status" role="status" aria-live="polite"></p>
+          <div class="purchase-thanks-actions">
+            <a class="button" id="thanks-download" href="#download">Download for Mac (Apple Silicon)</a>
+            <a class="button button-secondary" href="#pricing">Pro details</a>
+          </div>
+        </div>
+      </section>
+
       <section class="hero container hero-captionbake">
         <div class="hero-captionbake-grid">
           <div>
@@ -441,6 +476,7 @@ curl -X POST http://127.0.0.1:18765/export \
     </footer>
 
     <script src="./config.js"></script>
+    <script src="./activate.js"></script>
     <script src="../assets/js/site-nav.js"></script>
   </body>
 </html>
