@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### feat/captionbake-pro-checkout
+
+- Wired CaptionBake Pro to the Lemon Squeezy checkout ($39 one-time, 1 Mac).
+- Removed the unused monthly price mention from the product page.
+
 ### chore/captionbake-external-releases
 
 - Point CaptionBake Apple Silicon downloads at `releases.corelogic.cc` instead of hosting the DMG in this repo.
