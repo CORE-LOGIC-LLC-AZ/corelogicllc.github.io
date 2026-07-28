@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### feat/captionbake-generate-screenshot
+
+- Added a gallery screenshot showing Generate captions (Pro) after a video is loaded, with updated captions for the import flow.
+
 ### feat/captionbake-pro-checkout
 
 - Wired CaptionBake Pro to the Lemon Squeezy checkout ($39 one-time, 1 Mac).
