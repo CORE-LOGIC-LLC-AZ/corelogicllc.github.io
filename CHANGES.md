@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### feat/captionbake-windows-downloads
+
+- Added Windows x64 and ARM64 download buttons on the CaptionBake page (unsigned installer SmartScreen note included).
+- Updated `config.js` for Windows release URLs and the homepage CaptionBake blurb for Mac + Windows.
+
 ### feat/captionbake-generate-screenshot
 
 - Added a gallery screenshot showing Generate captions (Pro) after a video is loaded, with updated captions for the import flow.
