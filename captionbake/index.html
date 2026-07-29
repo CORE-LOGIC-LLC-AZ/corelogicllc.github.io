@@ -6,12 +6,12 @@
     <title>CaptionBake | Core Logic LLC</title>
     <meta
       name="description"
-      content="CaptionBake is a freemium macOS app from Core Logic LLC for styling captions and burning them into video. Free unlimited burn-in; Pro unlocks AI caption generation, Whisper karaoke, word timing, .ass export, and a local HTTP API."
+      content="CaptionBake is a freemium macOS app from Core Logic LLC. Free: import a video and caption file, style, and burn in unlimited MP4s. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
     />
     <meta property="og:title" content="CaptionBake" />
     <meta
       property="og:description"
-      content="Burn captions into video — free unlimited MP4 burn-in, or upgrade to Pro for AI captions, Whisper karaoke, word timing, and local HTTP automation. Offline."
+      content="Free burn-in needs a video plus a caption file (SRT, VTT, and more). Pro generates captions from audio, plus Whisper karaoke, word timing, and local HTTP automation."
     />
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
@@ -121,8 +121,9 @@
             <h1>CaptionBake</h1>
             <p class="lead">
               Burn captions into video — style them live and export a finished MP4 for free.
-              No caption file? Pro generates English captions from the audio with on-device Whisper.
-              Also unlock karaoke highlight, word timing review, editable
+              Free needs a video and a caption file (SRT, VTT, and more).
+              No captions yet? Pro generates English captions from the audio with on-device Whisper,
+              plus karaoke highlight, word timing review, editable
               <code>.ass</code> export, and a local HTTP API.
             </p>
             <div class="hero-actions" id="download">
@@ -164,7 +165,10 @@
               alt="CaptionBake import screen for video and caption files"
               loading="lazy"
             />
-            <figcaption>Drop in a video and optional caption file to get started.</figcaption>
+            <figcaption>
+              Free: drop in a video and a caption file. Pro can generate captions from the audio if
+              you don’t have one.
+            </figcaption>
           </figure>
           <figure class="shot">
             <img
@@ -210,8 +214,9 @@
           <article class="offer-item">
             <h3>Live styling</h3>
             <p>
-              Import a video (and captions if you have them), then tweak font, color, stroke, shadow,
-              position, and safe areas in a real-time preview. Press ⌘I to open Import anytime.
+              Import a video and caption file, then tweak font, color, stroke, shadow, position, and
+              safe areas in a real-time preview. Press ⌘I to open Import anytime. Generating captions
+              from audio is Pro.
             </p>
           </article>
           <article class="offer-item">
@@ -252,8 +257,8 @@
           <article class="offer-item">
             <h3>Free burn-in forever</h3>
             <p>
-              Unlimited full-res MP4 export with no watermark. No account required to download or
-              use the free tier. Tips are optional.
+              Bring your own video and caption file — then unlimited full-res MP4 export with no
+              watermark. No account required. Tips are optional.
             </p>
           </article>
         </div>
@@ -263,8 +268,9 @@
         <div class="section-intro">
           <h2>Free vs Pro</h2>
           <p class="lead">
-            Download free. Unlock Pro for <strong>$39</strong> one-time via Lemon Squeezy — activate
-            the license key in Settings (1 Mac).
+            Free burn-in needs a video and a caption file. Unlock Pro for <strong>$39</strong>
+            one-time via Lemon Squeezy when you want AI captions from audio and karaoke tools —
+            activate the license key in Settings (1 Mac).
           </p>
           <div class="hero-actions">
             <a
@@ -278,15 +284,16 @@
           <article class="offer-item">
             <h3>Free</h3>
             <p>
-              Import video + captions, full canvas styling, and unlimited watermark-free MP4 burn-in.
+              Requires a video <strong>and</strong> a caption file (SRT, VTT, SBV, ASS/SSA, or
+              TTML). Full canvas styling and unlimited watermark-free MP4 burn-in.
             </p>
           </article>
           <article class="offer-item">
             <h3>Pro</h3>
             <p>
-              AI caption generation from audio (English), Whisper karaoke alignment, word timing /
-              cascade editor, editable karaoke <code>.ass</code> export, named style presets, and
-              the local HTTP REST API.
+              Video alone is enough — AI caption generation from audio (English), plus Whisper
+              karaoke alignment, word timing / cascade editor, editable karaoke
+              <code>.ass</code> export, named style presets, and the local HTTP REST API.
             </p>
           </article>
         </div>
@@ -449,8 +456,9 @@ curl -X POST http://127.0.0.1:18765/export \
           <div>
             <h2>Upgrade or tip</h2>
             <p class="lead">
-              Free burn-in stays unlimited. CaptionBake Pro unlocks AI captions, karaoke tooling, and
-              automation. Tips via GitHub Sponsors are optional and still appreciated.
+              Free burn-in stays unlimited when you bring a video and caption file. CaptionBake Pro
+              unlocks AI captions from audio, karaoke tooling, and automation. Tips via GitHub
+              Sponsors are optional and still appreciated.
             </p>
           </div>
           <div class="strip-actions">
