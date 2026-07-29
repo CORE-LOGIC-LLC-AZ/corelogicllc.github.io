@@ -6,7 +6,7 @@
     <title>CaptionBake | Core Logic LLC</title>
     <meta
       name="description"
-      content="CaptionBake is a freemium macOS app from Core Logic LLC. Free: import a video and caption file, style, and burn in unlimited MP4s. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
+      content="CaptionBake is a freemium macOS and Windows app from Core Logic LLC. Free: import a video and caption file, style, and burn in unlimited MP4s. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
     />
     <meta property="og:title" content="CaptionBake" />
     <meta
@@ -116,7 +116,7 @@
           <div>
             <div class="brand-row">
               <img src="images/icon.png" width="56" height="56" alt="" />
-              <p class="eyebrow" style="margin: 0">Freemium macOS app</p>
+              <p class="eyebrow" style="margin: 0">Freemium desktop app</p>
             </div>
             <h1>CaptionBake</h1>
             <p class="lead">
@@ -133,12 +133,29 @@
                 href="https://releases.corelogic.cc/captionbake/mac_arm64/latest.dmg"
                 >Download for Mac (Apple Silicon)</a
               >
+              <a
+                class="button button-secondary"
+                id="download-win-x64"
+                href="https://releases.corelogic.cc/captionbake/win_x64/latest.exe"
+                >Download for Windows (x64)</a
+              >
+              <a
+                class="button button-secondary"
+                id="download-win-arm64"
+                href="https://releases.corelogic.cc/captionbake/win_arm64/latest.exe"
+                >Download for Windows (ARM64)</a
+              >
             </div>
             <p class="meta">
-              macOS 12+ · Apple Silicon · FFmpeg included · Free burn-in ·
+              macOS 12+ · Windows 10+ · FFmpeg included · Free burn-in ·
               <a href="#pricing">Pro — $39</a> ·
               <a href="#api">HTTP API</a> ·
               <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
+            </p>
+            <p class="meta windows-note">
+              Windows installers are unsigned for now. If SmartScreen says
+              “Windows protected your PC,” choose <strong>More info</strong> →
+              <strong>Run anyway</strong>.
             </p>
           </div>
           <figure class="hero-shot">
