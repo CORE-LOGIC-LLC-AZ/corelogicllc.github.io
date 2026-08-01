@@ -4,6 +4,8 @@ window.CAPTIONBAKE_RELEASE = {
   arm64: "https://releases.corelogic.cc/captionbake/mac_arm64/latest.dmg",
   winX64: "https://releases.corelogic.cc/captionbake/win_x64/latest.exe",
   winArm64: "https://releases.corelogic.cc/captionbake/win_arm64/latest.exe",
+  linuxAmd64: "https://releases.corelogic.cc/captionbake/linux_amd64/latest.deb",
+  linuxArm64: "https://releases.corelogic.cc/captionbake/linux_arm64/latest.deb",
   tipUrl: "https://github.com/sponsors/CORE-LOGIC-LLC-AZ",
 };
 
@@ -16,4 +18,8 @@ window.CAPTIONBAKE_RELEASE = {
   if (winX64 && cfg.winX64) winX64.setAttribute("href", cfg.winX64);
   var winArm = document.getElementById("download-win-arm64");
   if (winArm && cfg.winArm64) winArm.setAttribute("href", cfg.winArm64);
+  var linuxAmd64 = document.getElementById("download-linux-amd64");
+  if (linuxAmd64 && cfg.linuxAmd64) linuxAmd64.setAttribute("href", cfg.linuxAmd64);
+  var linuxArm64 = document.getElementById("download-linux-arm64");
+  if (linuxArm64 && cfg.linuxArm64) linuxArm64.setAttribute("href", cfg.linuxArm64);
 })();

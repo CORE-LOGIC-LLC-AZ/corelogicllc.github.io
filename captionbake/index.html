@@ -6,7 +6,7 @@
     <title>CaptionBake | Core Logic LLC</title>
     <meta
       name="description"
-      content="CaptionBake is a freemium macOS and Windows app from Core Logic LLC. Free: import a video and caption file, style, and burn in unlimited MP4s. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
+      content="CaptionBake is a freemium macOS, Windows, and Linux app from Core Logic LLC. Free: import a video and caption file, style, and burn in unlimited MP4s. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
     />
     <meta property="og:title" content="CaptionBake" />
     <meta
@@ -145,9 +145,21 @@
                 href="https://releases.corelogic.cc/captionbake/win_arm64/latest.exe"
                 >Download for Windows (ARM64)</a
               >
+              <a
+                class="button button-secondary"
+                id="download-linux-amd64"
+                href="https://releases.corelogic.cc/captionbake/linux_amd64/latest.deb"
+                >Download for Linux (amd64 .deb)</a
+              >
+              <a
+                class="button button-secondary"
+                id="download-linux-arm64"
+                href="https://releases.corelogic.cc/captionbake/linux_arm64/latest.deb"
+                >Download for Linux (arm64 .deb)</a
+              >
             </div>
             <p class="meta">
-              macOS 12+ · Windows 10+ · FFmpeg included · Free burn-in ·
+              macOS 12+ · Windows 10+ · Debian/Ubuntu · FFmpeg included · Free burn-in ·
               <a href="#pricing">Pro — $39</a> ·
               <a href="#api">HTTP API</a> ·
               <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
@@ -502,7 +514,7 @@ curl -X POST http://127.0.0.1:18765/export \
       </div>
     </footer>
 
-    <script src="./config.js?v=0.1.0-f4a3e5af"></script>
+    <script src="./config.js?v=0.1.0-linux-deb"></script>
     <script src="./activate.js"></script>
     <script src="../assets/js/site-nav.js"></script>
   </body>
