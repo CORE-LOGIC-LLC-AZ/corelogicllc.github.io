@@ -13,7 +13,9 @@
   var copyBtn = document.getElementById("copy-license-key");
   var status = document.getElementById("copy-license-status");
   var thanksDownload = document.getElementById("thanks-download");
-  var heroDownload = document.getElementById("download-arm");
+  var heroDownload =
+    document.getElementById("download-primary") ||
+    document.getElementById("download-arm");
   if (!panel || !input || !copyBtn) return;
 
   input.value = key;

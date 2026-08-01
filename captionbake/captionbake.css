@@ -95,6 +95,51 @@
   line-height: 1.45;
 }
 
+.download-other {
+  margin: 0.85rem 0 0;
+  max-width: 28rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border, #cfc8bc);
+  border-radius: 0.45rem;
+  background: color-mix(in srgb, var(--surface, #f7f4ee) 80%, #fff);
+}
+
+.download-other-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.45rem 0.85rem;
+  padding: 0.35rem 0;
+}
+
+.download-other-row + .download-other-row {
+  border-top: 1px solid var(--border, #cfc8bc);
+}
+
+.download-other-os {
+  flex: 0 0 5.5rem;
+  color: var(--ink, #1a1a1a);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.download-arch {
+  color: var(--accent-strong, #3d6b5a);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.download-arch:hover,
+.download-arch:focus-visible {
+  color: var(--ink, #1a1a1a);
+}
+
+.windows-install-note[hidden],
+.linux-apt-note[hidden] {
+  display: none !important;
+}
+
 .linux-apt-note strong {
   color: var(--ink, #1a1a1a);
 }
