@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### docs/captionbake-windows-smartscreen-note
+
+- Clarified the Windows SmartScreen / unsigned-installer warning under the download buttons (More info → Run anyway) with clearer styling.
+
 ### feat/captionbake-windows-downloads
 
 - Added Windows x64 and ARM64 download buttons on the CaptionBake page (unsigned installer SmartScreen note included).
