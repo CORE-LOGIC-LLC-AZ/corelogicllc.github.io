@@ -16,7 +16,7 @@
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="../assets/css/styles.css?v=20260726a" />
-    <link rel="stylesheet" href="captionbake.css?v=20260801a" />
+    <link rel="stylesheet" href="captionbake.css?v=20260801b" />
   </head>
   <body>
     <header class="site-header">
@@ -170,6 +170,16 @@
               may show <em>“Windows protected your PC.”</em>
               Click <strong>More info</strong>, then <strong>Run anyway</strong> to continue.
               This is expected for CaptionBake’s current unsigned builds.
+            </aside>
+            <aside class="linux-apt-note" aria-label="Linux apt install">
+              <strong>Linux (apt):</strong>
+              Prefer package manager install on Debian/Ubuntu:
+              <pre class="install-snippet"><code>curl -fsSL https://releases.corelogic.cc/captionbake/apt/corelogic.gpg \
+  | sudo tee /usr/share/keyrings/corelogic.gpg >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/corelogic.gpg] https://releases.corelogic.cc/captionbake/apt stable main" \
+  | sudo tee /etc/apt/sources.list.d/captionbake.list
+sudo apt update && sudo apt install caption-bake</code></pre>
+              Or use the <code>.deb</code> buttons above for a one-off install.
             </aside>
           </div>
           <figure class="hero-shot">
