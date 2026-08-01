@@ -16,7 +16,7 @@
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="../assets/css/styles.css?v=20260726a" />
-    <link rel="stylesheet" href="captionbake.css?v=20260801b" />
+    <link rel="stylesheet" href="captionbake.css?v=20260801c" />
   </head>
   <body>
     <header class="site-header">
@@ -174,11 +174,22 @@
             <aside class="linux-apt-note" aria-label="Linux apt install">
               <strong>Linux (apt):</strong>
               Prefer package manager install on Debian/Ubuntu:
-              <pre class="install-snippet"><code>curl -fsSL https://releases.corelogic.cc/captionbake/apt/corelogic.gpg \
+              <div class="install-snippet-wrap">
+                <pre class="install-snippet" id="linux-apt-snippet"><code>curl -fsSL https://releases.corelogic.cc/captionbake/apt/corelogic.gpg \
   | sudo tee /usr/share/keyrings/corelogic.gpg >/dev/null
 echo "deb [signed-by=/usr/share/keyrings/corelogic.gpg] https://releases.corelogic.cc/captionbake/apt stable main" \
   | sudo tee /etc/apt/sources.list.d/captionbake.list
 sudo apt update && sudo apt install caption-bake</code></pre>
+                <button
+                  type="button"
+                  class="install-copy-btn"
+                  id="copy-linux-apt"
+                  aria-label="Copy apt install commands"
+                >
+                  Copy
+                </button>
+              </div>
+              <p id="copy-linux-apt-status" class="install-copy-status" role="status" aria-live="polite"></p>
               Or use the <code>.deb</code> buttons above for a one-off install.
             </aside>
           </div>

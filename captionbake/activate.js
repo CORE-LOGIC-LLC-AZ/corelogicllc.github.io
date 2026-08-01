@@ -57,3 +57,59 @@
 
   panel.scrollIntoView({ behavior: "smooth", block: "start" });
 })();
+
+(function copyLinuxAptCommands() {
+  var btn = document.getElementById("copy-linux-apt");
+  var snippet = document.getElementById("linux-apt-snippet");
+  var status = document.getElementById("copy-linux-apt-status");
+  if (!btn || !snippet) return;
+
+  var resetTimer = null;
+
+  function textToCopy() {
+    var code = snippet.querySelector("code");
+    return ((code && code.textContent) || snippet.textContent || "").replace(/\s+$/, "");
+  }
+
+  function setStatus(msg, copied) {
+    if (status) status.textContent = msg || "";
+    btn.classList.toggle("is-copied", Boolean(copied));
+    btn.textContent = copied ? "Copied" : "Copy";
+    if (resetTimer) clearTimeout(resetTimer);
+    if (copied) {
+      resetTimer = setTimeout(function () {
+        btn.classList.remove("is-copied");
+        btn.textContent = "Copy";
+        if (status) status.textContent = "";
+      }, 2000);
+    }
+  }
+
+  btn.addEventListener("click", function () {
+    var text = textToCopy();
+    function ok() {
+      setStatus("Copied to clipboard.", true);
+    }
+    function fail() {
+      setStatus("Could not copy — select the commands and copy manually.", false);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, fail);
+      return;
+    }
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      ok();
+    } catch (_) {
+      fail();
+    }
+  });
+})();

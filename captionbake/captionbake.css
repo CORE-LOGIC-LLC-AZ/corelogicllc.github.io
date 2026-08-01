@@ -100,7 +100,7 @@
 }
 
 .install-snippet {
-  margin: 0.65rem 0 0.35rem;
+  margin: 0;
   padding: 0.65rem 0.75rem;
   overflow-x: auto;
   border-radius: 0.4rem;
@@ -108,6 +108,49 @@
   background: #fff;
   font-size: 0.78rem;
   line-height: 1.4;
+}
+
+.install-snippet-wrap {
+  position: relative;
+  margin: 0.65rem 0 0.35rem;
+}
+
+.install-snippet-wrap .install-snippet {
+  padding-right: 4.25rem;
+}
+
+.install-copy-btn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  margin: 0;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid var(--border, #cfc8bc);
+  border-radius: 0.35rem;
+  background: color-mix(in srgb, var(--surface, #f7f4ee) 70%, #fff);
+  color: var(--ink, #1a1a1a);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.install-copy-btn:hover,
+.install-copy-btn:focus-visible {
+  border-color: var(--accent-strong, #3d6b5a);
+  outline: none;
+}
+
+.install-copy-btn.is-copied {
+  border-color: var(--accent-strong, #3d6b5a);
+  color: var(--accent-strong, #3d6b5a);
+}
+
+.install-copy-status {
+  min-height: 1.1rem;
+  margin: 0.15rem 0 0.25rem;
+  color: var(--muted, #5c574e);
+  font-size: 0.82rem;
 }
 
 .install-snippet code {
