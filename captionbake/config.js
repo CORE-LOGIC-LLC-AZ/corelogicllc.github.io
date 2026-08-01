@@ -2,6 +2,7 @@
 window.CAPTIONBAKE_RELEASE = {
   version: "0.1.0",
   arm64: "https://releases.corelogic.cc/captionbake/mac_arm64/latest.dmg",
+  intel: "https://releases.corelogic.cc/captionbake/mac_intel/latest.dmg",
   winX64: "https://releases.corelogic.cc/captionbake/win_x64/latest.exe",
   winArm64: "https://releases.corelogic.cc/captionbake/win_arm64/latest.exe",
   linuxAmd64: "https://releases.corelogic.cc/captionbake/linux_amd64/latest.deb",
@@ -14,6 +15,8 @@ window.CAPTIONBAKE_RELEASE = {
   if (!cfg) return;
   var arm = document.getElementById("download-arm");
   if (arm && cfg.arm64) arm.setAttribute("href", cfg.arm64);
+  var intel = document.getElementById("download-intel");
+  if (intel && cfg.intel) intel.setAttribute("href", cfg.intel);
   var winX64 = document.getElementById("download-win-x64");
   if (winX64 && cfg.winX64) winX64.setAttribute("href", cfg.winX64);
   var winArm = document.getElementById("download-win-arm64");
