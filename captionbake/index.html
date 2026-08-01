@@ -16,7 +16,7 @@
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="../assets/css/styles.css?v=20260726a" />
-    <link rel="stylesheet" href="captionbake.css?v=20260801c" />
+    <link rel="stylesheet" href="captionbake.css?v=20260801e" />
   </head>
   <body>
     <header class="site-header">
@@ -129,49 +129,84 @@
             <div class="hero-actions" id="download">
               <a
                 class="button"
-                id="download-arm"
+                id="download-primary"
                 href="https://releases.corelogic.cc/captionbake/mac_arm64/latest.dmg"
-                >Download for Mac (Apple Silicon)</a
+                >Download for Mac</a
               >
-              <a
+              <button
+                type="button"
                 class="button button-secondary"
-                id="download-win-x64"
-                href="https://releases.corelogic.cc/captionbake/win_x64/latest.exe"
-                >Download for Windows (x64)</a
+                id="download-other-toggle"
+                aria-expanded="false"
+                aria-controls="download-other"
               >
-              <a
-                class="button button-secondary"
-                id="download-win-arm64"
-                href="https://releases.corelogic.cc/captionbake/win_arm64/latest.exe"
-                >Download for Windows (ARM64)</a
-              >
-              <a
-                class="button button-secondary"
-                id="download-linux-amd64"
-                href="https://releases.corelogic.cc/captionbake/linux_amd64/latest.deb"
-                >Download for Linux (amd64 .deb)</a
-              >
-              <a
-                class="button button-secondary"
-                id="download-linux-arm64"
-                href="https://releases.corelogic.cc/captionbake/linux_arm64/latest.deb"
-                >Download for Linux (arm64 .deb)</a
-              >
+                Other platforms
+              </button>
+            </div>
+            <div class="download-other" id="download-other" hidden>
+              <div class="download-other-row">
+                <span class="download-other-os">Mac</span>
+                <a
+                  class="download-arch"
+                  id="download-arm"
+                  href="https://releases.corelogic.cc/captionbake/mac_arm64/latest.dmg"
+                  >Apple Silicon</a
+                >
+              </div>
+              <div class="download-other-row">
+                <span class="download-other-os">Windows</span>
+                <a
+                  class="download-arch"
+                  id="download-win-x64"
+                  href="https://releases.corelogic.cc/captionbake/win_x64/latest.exe"
+                  >x64</a
+                >
+                <a
+                  class="download-arch"
+                  id="download-win-arm64"
+                  href="https://releases.corelogic.cc/captionbake/win_arm64/latest.exe"
+                  >ARM64</a
+                >
+              </div>
+              <div class="download-other-row">
+                <span class="download-other-os">Linux</span>
+                <a
+                  class="download-arch"
+                  id="download-linux-amd64"
+                  href="https://releases.corelogic.cc/captionbake/linux_amd64/latest.deb"
+                  >amd64</a
+                >
+                <a
+                  class="download-arch"
+                  id="download-linux-arm64"
+                  href="https://releases.corelogic.cc/captionbake/linux_arm64/latest.deb"
+                  >arm64</a
+                >
+              </div>
             </div>
             <p class="meta">
               macOS 12+ · Windows 10+ · Debian/Ubuntu · FFmpeg included · Free burn-in ·
               <a href="#pricing">Pro — $39</a> ·
               <a href="#api">HTTP API</a> ·
               <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
+              ·
+              <a
+                href="https://github.com/CORE-LOGIC-LLC-AZ/caption-bake-public/discussions/new?category=ideas"
+                >Request a feature</a
+              >
+              ·
+              <a href="https://github.com/CORE-LOGIC-LLC-AZ/caption-bake-public/issues/new"
+                >Report a bug</a
+              >
             </p>
-            <aside class="windows-install-note" aria-label="Windows install note">
+            <aside class="windows-install-note" id="windows-install-note" aria-label="Windows install note">
               <strong>Windows install note:</strong>
               Our Windows installers are not code-signed yet, so Windows SmartScreen
               may show <em>“Windows protected your PC.”</em>
               Click <strong>More info</strong>, then <strong>Run anyway</strong> to continue.
               This is expected for CaptionBake’s current unsigned builds.
             </aside>
-            <aside class="linux-apt-note" aria-label="Linux apt install">
+            <aside class="linux-apt-note" id="linux-apt-note" aria-label="Linux apt install">
               <strong>Linux (apt):</strong>
               Prefer package manager install on Debian/Ubuntu:
               <div class="install-snippet-wrap">
@@ -190,7 +225,7 @@ sudo apt update && sudo apt install caption-bake</code></pre>
                 </button>
               </div>
               <p id="copy-linux-apt-status" class="install-copy-status" role="status" aria-live="polite"></p>
-              Or use the <code>.deb</code> buttons above for a one-off install.
+              Or use the <code>.deb</code> links under Other platforms for a one-off install.
             </aside>
           </div>
           <figure class="hero-shot">
@@ -522,6 +557,16 @@ curl -X POST http://127.0.0.1:18765/export \
             <a class="button button-secondary" href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ"
               >Tip jar</a
             >
+            <a
+              class="button button-secondary"
+              href="https://github.com/CORE-LOGIC-LLC-AZ/caption-bake-public/discussions/new?category=ideas"
+              >Request a feature</a
+            >
+            <a
+              class="button button-secondary"
+              href="https://github.com/CORE-LOGIC-LLC-AZ/caption-bake-public/issues/new"
+              >Report a bug</a
+            >
             <a class="button button-secondary" href="./downloads/SHA256SUMS.txt">Checksums</a>
           </div>
         </div>
@@ -536,6 +581,7 @@ curl -X POST http://127.0.0.1:18765/export \
     </footer>
 
     <script src="./config.js?v=0.1.0-linux-deb"></script>
+    <script src="./downloads.js?v=20260801e"></script>
     <script src="./activate.js?v=20260801d"></script>
     <script src="./apt-copy.js?v=20260801d"></script>
     <script src="../assets/js/site-nav.js"></script>
