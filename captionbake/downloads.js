@@ -11,8 +11,13 @@
   if (!primary || !toggle || !panel) return;
 
   var PLATFORMS = {
-    mac: {
+    mac_arm64: {
       id: "download-arm",
+      label: "Download for Mac",
+      family: "mac",
+    },
+    mac_intel: {
+      id: "download-intel",
       label: "Download for Mac",
       family: "mac",
     },
@@ -57,15 +62,15 @@
         navigator.userAgentData &&
         /arm/i.test(String(navigator.userAgentData.architecture || "")));
 
-    if (isMac) return "mac";
+    if (isMac) return "mac_arm64";
     if (isWin) return isArm ? "win_arm64" : "win_x64";
     if (isLinux) return isArm ? "linux_arm64" : "linux_amd64";
-    return "mac";
+    return "mac_arm64";
   }
 
   function applyPrimary(key) {
-    var meta = PLATFORMS[key] || PLATFORMS.mac;
-    var source = linkFor(key) || linkFor("mac");
+    var meta = PLATFORMS[key] || PLATFORMS.mac_arm64;
+    var source = linkFor(key) || linkFor("mac_arm64");
     if (!source) return;
     primary.setAttribute("href", source.getAttribute("href") || "#download");
     primary.textContent = meta.label;
@@ -106,7 +111,7 @@
         } else if (plat.indexOf("linux") !== -1) {
           applyPrimary(isArm ? "linux_arm64" : "linux_amd64");
         } else if (plat.indexOf("mac") !== -1) {
-          applyPrimary("mac");
+          applyPrimary("mac_arm64");
         }
       })
       .catch(function () {
