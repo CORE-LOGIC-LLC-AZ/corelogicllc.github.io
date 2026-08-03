@@ -1,5 +1,64 @@
 /* ReelDispatch product page — accents within Core Logic site system */
 
+.purchase-thanks {
+  padding-top: clamp(2rem, 6vh, 3.5rem);
+  padding-bottom: 0;
+}
+
+.purchase-thanks-card {
+  max-width: 40rem;
+  padding: 1.5rem 1.6rem 1.65rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.purchase-thanks-card .lead {
+  margin: 0.65rem 0 1.15rem;
+}
+
+.license-key-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink, #1a1a1a);
+}
+
+.license-key-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: stretch;
+}
+
+.license-key-value {
+  flex: 1 1 14rem;
+  min-width: 0;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.45rem;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink, #1a1a1a);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.92rem;
+}
+
+.license-key-status {
+  min-height: 1.25rem;
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.purchase-thanks-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
 .meta {
   margin: 1rem 0 0;
   color: var(--muted);

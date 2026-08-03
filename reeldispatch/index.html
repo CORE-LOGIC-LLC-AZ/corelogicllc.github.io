@@ -76,6 +76,41 @@
     </header>
 
     <main>
+      <section
+        id="purchase-thanks"
+        class="container section purchase-thanks"
+        hidden
+        aria-labelledby="purchase-thanks-title"
+      >
+        <div class="purchase-thanks-card">
+          <p class="eyebrow">Purchase complete</p>
+          <h2 id="purchase-thanks-title">Much appreciated!</h2>
+          <p class="lead">
+            Thanks for buying ReelDispatch Pro. Copy your license key, then open
+            ReelDispatch and paste it under <strong>Have a license key?</strong> to
+            activate. If you don’t have the app yet, download it below.
+          </p>
+          <label class="license-key-label" for="license-key-value">Your license key</label>
+          <div class="license-key-row">
+            <input
+              id="license-key-value"
+              class="license-key-value"
+              type="text"
+              readonly
+              spellcheck="false"
+              autocomplete="off"
+              value=""
+            />
+            <button type="button" class="button" id="copy-license-key">Copy</button>
+          </div>
+          <p id="copy-license-status" class="license-key-status" role="status" aria-live="polite"></p>
+          <div class="purchase-thanks-actions">
+            <a class="button" id="thanks-download" href="#download">Download for Mac</a>
+            <a class="button button-secondary" href="#pricing">Pro details</a>
+          </div>
+        </div>
+      </section>
+
       <section class="hero container hero-reeldispatch">
         <div class="hero-reeldispatch-grid">
           <div>
@@ -89,11 +124,18 @@
               <strong>Instagram Reels</strong>. Local-first queue and OS keychain tokens — free to
               start, with Pro for scheduling, folder automation, and a localhost API.
             </p>
-            <div class="hero-actions">
-              <a class="button" href="../index.html#contact">Get early access</a>
+            <div class="hero-actions" id="download">
+              <a
+                class="button"
+                id="download-primary"
+                href="https://releases.corelogic.cc/reeldispatch/v0.1.0/ReelDispatch-0.1.0.dmg"
+                >Download for Mac</a
+              >
               <a class="button button-secondary" href="#pricing">Free &amp; Pro</a>
             </div>
             <p class="meta">
+              <span id="download-version" hidden></span>
+              <span id="download-version-sep" hidden> · </span>
               macOS (Windows &amp; Linux planned) · Local SQLite · FFmpeg validation ·
               <a href="privacy.html">Privacy</a> ·
               <a href="terms.html">Terms</a> ·
@@ -358,6 +400,8 @@
       </div>
     </footer>
 
+    <script src="./downloads.js?v=20260803a"></script>
+    <script src="./activate.js?v=20260803a"></script>
     <script src="../assets/js/site-nav.js"></script>
   </body>
 </html>
