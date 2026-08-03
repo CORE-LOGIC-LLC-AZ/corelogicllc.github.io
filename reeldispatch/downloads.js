@@ -25,7 +25,7 @@
     }
   }
 
-  fetch(LATEST_URL, { cache: "no-cache" })
+  fetch(LATEST_URL + "?t=" + Date.now(), { cache: "no-cache" })
     .then(function (res) {
       if (!res.ok) throw new Error("latest.json " + res.status);
       return res.json();
