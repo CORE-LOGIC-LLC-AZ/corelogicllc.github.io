@@ -69,7 +69,9 @@
   color: var(--accent-strong);
 }
 
-.windows-install-note {
+.windows-install-note,
+.linux-apt-note,
+.product-note {
   margin: 0.85rem 0 0;
   max-width: 36rem;
   padding: 0.75rem 0.9rem;
@@ -80,19 +82,14 @@
   line-height: 1.45;
 }
 
-.windows-install-note strong {
-  color: var(--ink, #1a1a1a);
+.linux-apt-note {
+  max-width: 40rem;
 }
 
-.linux-apt-note {
-  margin: 0.85rem 0 0;
-  max-width: 40rem;
-  padding: 0.75rem 0.9rem;
-  border-left: 3px solid var(--border, #cfc8bc);
-  background: color-mix(in srgb, var(--surface, #f7f4ee) 85%, #fff);
-  color: var(--muted, #5c574e);
-  font-size: 0.9rem;
-  line-height: 1.45;
+.windows-install-note strong,
+.linux-apt-note strong,
+.product-note strong {
+  color: var(--ink, #1a1a1a);
 }
 
 .download-other {
