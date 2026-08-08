@@ -6,7 +6,7 @@
     <title>CaptionBake | Core Logic LLC</title>
     <meta
       name="description"
-      content="CaptionBake is a freemium macOS, Windows, and Linux app from Core Logic LLC. Free: import a video and caption file, style, and burn in unlimited MP4s. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
+      content="CaptionBake is a freemium macOS and Windows app from Core Logic LLC. Free: import a video and caption file, style, and burn in unlimited MP4s. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
     />
     <meta property="og:title" content="CaptionBake" />
     <meta
@@ -202,24 +202,9 @@
                   >arm64</a
                 >
               </div>
-              <div class="download-other-row">
-                <span class="download-other-os">Linux</span>
-                <a
-                  class="download-arch"
-                  id="download-linux-amd64"
-                  href="https://releases.corelogic.cc/captionbake/linux_amd64/latest.deb"
-                  >amd64</a
-                >
-                <a
-                  class="download-arch"
-                  id="download-linux-arm64"
-                  href="https://releases.corelogic.cc/captionbake/linux_arm64/latest.deb"
-                  >arm64</a
-                >
-              </div>
             </div>
             <p class="meta">
-              macOS 12+ · Windows 10+ · Debian/Ubuntu · FFmpeg included · Free burn-in ·
+              macOS 12+ · Windows 10+ · FFmpeg included · Free burn-in ·
               <a href="#pricing">Pro upgrade soon</a> ·
               <a href="#api">HTTP API</a> ·
               <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
@@ -244,27 +229,6 @@
               may show <em>“Windows protected your PC.”</em>
               Click <strong>More info</strong>, then <strong>Run anyway</strong> to continue.
               This is expected for CaptionBake’s current unsigned builds.
-            </aside>
-            <aside class="linux-apt-note" id="linux-apt-note" aria-label="Linux apt install">
-              <strong>Linux (apt):</strong>
-              Prefer package manager install on Debian/Ubuntu:
-              <div class="install-snippet-wrap">
-                <pre class="install-snippet" id="linux-apt-snippet"><code>curl -fsSL https://releases.corelogic.cc/captionbake/apt/corelogic.gpg \
-  | sudo tee /usr/share/keyrings/corelogic.gpg >/dev/null
-echo "deb [signed-by=/usr/share/keyrings/corelogic.gpg] https://releases.corelogic.cc/captionbake/apt stable main" \
-  | sudo tee /etc/apt/sources.list.d/captionbake.list
-sudo apt update && sudo apt install caption-bake</code></pre>
-                <button
-                  type="button"
-                  class="install-copy-btn"
-                  id="copy-linux-apt"
-                  aria-label="Copy apt install commands"
-                >
-                  Copy
-                </button>
-              </div>
-              <p id="copy-linux-apt-status" class="install-copy-status" role="status" aria-live="polite"></p>
-              Or use the <code>.deb</code> links under Other platforms for a one-off install.
             </aside>
           </div>
           <figure class="hero-shot">
@@ -612,10 +576,9 @@ curl -X POST http://127.0.0.1:18765/export \
       </div>
     </footer>
 
-    <script src="./config.js?v=0.1.0-mac-intel"></script>
+    <script src="./config.js?v=0.1.0-8baeeda3"></script>
     <script src="./downloads.js?v=20260801f"></script>
     <script src="./activate.js?v=20260801d"></script>
-    <script src="./apt-copy.js?v=20260801d"></script>
     <script src="../assets/js/site-nav.js"></script>
   </body>
 </html>
