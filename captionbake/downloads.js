@@ -6,7 +6,6 @@
   var toggle = document.getElementById("download-other-toggle");
   var panel = document.getElementById("download-other");
   var winNote = document.getElementById("windows-install-note");
-  var linuxNote = document.getElementById("linux-apt-note");
   var thanksDownload = document.getElementById("thanks-download");
   if (!primary || !toggle || !panel) return;
 
@@ -31,16 +30,6 @@
       label: "Download for Windows",
       family: "windows",
     },
-    linux_amd64: {
-      id: "download-linux-amd64",
-      label: "Download for Linux",
-      family: "linux",
-    },
-    linux_arm64: {
-      id: "download-linux-arm64",
-      label: "Download for Linux",
-      family: "linux",
-    },
   };
 
   function linkFor(key) {
@@ -53,8 +42,6 @@
     var platform = navigator.platform || "";
     var isMac = /Mac|iPhone|iPad|iPod/.test(platform) || /Mac OS X/.test(ua);
     var isWin = /^Win/.test(platform) || /Windows/.test(ua);
-    var isLinux =
-      (/Linux/.test(platform) || /Linux/.test(ua)) && !/Android/.test(ua);
     var isArm =
       /arm64|aarch64|Apple Silicon/i.test(ua) ||
       /arm64|aarch64/i.test(platform) ||
@@ -64,7 +51,6 @@
 
     if (isMac) return "mac_arm64";
     if (isWin) return isArm ? "win_arm64" : "win_x64";
-    if (isLinux) return isArm ? "linux_arm64" : "linux_amd64";
     return "mac_arm64";
   }
 
@@ -80,7 +66,6 @@
       thanksDownload.textContent = meta.label;
     }
     if (winNote) winNote.hidden = meta.family !== "windows";
-    if (linuxNote) linuxNote.hidden = meta.family !== "linux";
   }
 
   function setOpen(open) {
@@ -95,7 +80,7 @@
 
   applyPrimary(detectKey());
 
-  // Refine Windows/Linux arch when Client Hints are available.
+  // Refine Windows arch when Client Hints are available.
   if (
     navigator.userAgentData &&
     typeof navigator.userAgentData.getHighEntropyValues === "function"
@@ -108,8 +93,6 @@
         var isArm = arch === "arm" || arch === "arm64";
         if (plat.indexOf("windows") !== -1) {
           applyPrimary(isArm ? "win_arm64" : "win_x64");
-        } else if (plat.indexOf("linux") !== -1) {
-          applyPrimary(isArm ? "linux_arm64" : "linux_amd64");
         } else if (plat.indexOf("mac") !== -1) {
           applyPrimary("mac_arm64");
         }
