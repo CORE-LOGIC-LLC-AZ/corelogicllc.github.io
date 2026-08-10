@@ -6,12 +6,12 @@
     <title>CaptionBake | Core Logic LLC</title>
     <meta
       name="description"
-      content="CaptionBake is a freemium macOS and Windows app from Core Logic LLC. Free: import a video and caption file, style, and burn in unlimited MP4s. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
+      content="CaptionBake is a freemium macOS and Windows app from Core Logic LLC. Free: style and burn captions into unlimited MP4s, or convert MOV/MKV/WebM to social-ready MP4 without captions. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
     />
     <meta property="og:title" content="CaptionBake" />
     <meta
       property="og:description"
-      content="Free burn-in needs a video plus a caption file (SRT, VTT, and more). Pro generates captions from audio, plus Whisper karaoke, word timing, and local HTTP automation."
+      content="Free: burn captions into MP4, or convert video to social-ready MP4 without a caption file. Pro adds AI captions from audio, Whisper karaoke, word timing, and local HTTP automation."
     />
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
@@ -149,7 +149,8 @@
             <h1>CaptionBake</h1>
             <p class="lead">
               Burn captions into video — style them live and export a finished MP4 for free.
-              Free needs a video and a caption file (SRT, VTT, and more).
+              Captions are optional: import SRT, VTT, and more when you have them, or export
+              video alone to convert formats like MOV to a social-ready MP4 for Instagram.
               No captions yet? Pro generates English captions from the audio with on-device Whisper,
               plus karaoke highlight, word timing review, editable
               <code>.ass</code> export, and a local HTTP API.
@@ -220,7 +221,8 @@
             </p>
             <aside class="product-note" aria-label="Pro upgrade status">
               <strong>Free to use now.</strong>
-              Download and burn captions today. Pro (AI captions, karaoke tools, HTTP API) —
+              Download and burn captions — or convert video to MP4 without captions — today.
+              Pro (AI captions, karaoke tools, HTTP API) —
               <strong>$39</strong> one-time via Lemon Squeezy — will be available soon.
             </aside>
             <aside class="windows-install-note" id="windows-install-note" aria-label="Windows install note">
@@ -256,8 +258,8 @@
               loading="lazy"
             />
             <figcaption>
-              Free: drop in a video and a caption file. Pro can generate captions from the audio if
-              you don’t have one.
+              Free: drop in a video — add a caption file to burn in, or export alone to convert to
+              MP4. Pro can generate captions from the audio if you don’t have one.
             </figcaption>
           </figure>
           <figure class="shot">
@@ -304,9 +306,9 @@
           <article class="offer-item">
             <h3>Live styling</h3>
             <p>
-              Import a video and caption file, then tweak font, color, stroke, shadow, position, and
-              safe areas in a real-time preview. Press ⌘I to open Import anytime. Generating captions
-              from audio is Pro.
+              Import a video and optional caption file, then tweak font, color, stroke, shadow,
+              position, and safe areas in a real-time preview. Press ⌘I to open Import anytime.
+              Generating captions from audio is Pro.
             </p>
           </article>
           <article class="offer-item">
@@ -318,7 +320,15 @@
           <article class="offer-item">
             <h3>Offline burn-in</h3>
             <p>
-              Export a captioned MP4 on your Mac. No cloud upload — FFmpeg is bundled in the app.
+              Export a captioned MP4 on your Mac or Windows PC. No cloud upload — FFmpeg is bundled
+              in the app.
+            </p>
+          </article>
+          <article class="offer-item">
+            <h3>Convert to MP4</h3>
+            <p>
+              No caption file? Still hit Export — re-encode MOV, MKV, or WebM to a social-ready MP4
+              (H.264 + AAC, faststart) for Instagram, TikTok, and YouTube.
             </p>
           </article>
           <article class="offer-item">
@@ -345,10 +355,10 @@
             </p>
           </article>
           <article class="offer-item">
-            <h3>Free burn-in forever</h3>
+            <h3>Free forever</h3>
             <p>
-              Bring your own video and caption file — then unlimited full-res MP4 export with no
-              watermark. No account required. Tips are optional.
+              Unlimited full-res MP4 export with no watermark — burn captions when you have them, or
+              convert video alone. No account required. Tips are optional.
             </p>
           </article>
         </div>
@@ -358,9 +368,9 @@
         <div class="section-intro">
           <h2>Free vs Pro</h2>
           <p class="lead">
-            Free burn-in needs a video and a caption file — download and start today. Pro unlocks AI
-            captions from audio and karaoke tools for <strong>$39</strong> one-time; activate the
-            license key in Settings (1 Mac).
+            Free export works with video alone (convert to MP4) or with a caption file (burn-in) —
+            download and start today. Pro unlocks AI captions from audio and karaoke tools for
+            <strong>$39</strong> one-time; activate the license key in Settings (1 Mac).
           </p>
           <aside class="product-note" aria-label="Pro upgrade status">
             <strong>Pro checkout coming soon.</strong>
@@ -372,16 +382,17 @@
           <article class="offer-item">
             <h3>Free</h3>
             <p>
-              Requires a video <strong>and</strong> a caption file (SRT, VTT, SBV, ASS/SSA, or
-              TTML). Full canvas styling and unlimited watermark-free MP4 burn-in.
+              Import a video; caption file optional (SRT, VTT, SBV, ASS/SSA, or TTML). Full canvas
+              styling, unlimited watermark-free MP4 burn-in, and caption-free convert to social-ready
+              MP4.
             </p>
           </article>
           <article class="offer-item">
             <h3>Pro</h3>
             <p>
-              Video alone is enough — AI caption generation from audio (English), plus Whisper
-              karaoke alignment, word timing / cascade editor, editable karaoke
-              <code>.ass</code> export, named style presets, and the local HTTP REST API.
+              AI caption generation from audio (English), plus Whisper karaoke alignment, word
+              timing / cascade editor, editable karaoke <code>.ass</code> export, named style
+              presets, and the local HTTP REST API.
             </p>
           </article>
         </div>
@@ -391,9 +402,9 @@
         <div class="section-intro">
           <h2>Local HTTP API <span class="feature-badge">Pro</span></h2>
           <p class="lead">
-            Automate caption burn-in from Final Cut, a shell script, or any tool that can send HTTP.
-            The server runs only while CaptionBake is open, and only on your Mac
-            (<code>127.0.0.1</code>). Requires CaptionBake Pro.
+            Automate caption burn-in or caption-free MP4 convert from Final Cut, a shell script, or
+            any tool that can send HTTP. The server runs only while CaptionBake is open, and only on
+            your Mac (<code>127.0.0.1</code>). Requires CaptionBake Pro.
           </p>
         </div>
 
@@ -422,16 +433,16 @@
           </p>
 
           <h3>3. Export with <code>POST /export</code></h3>
-          <p>Send a JSON body with these required fields:</p>
+          <p>Send a JSON body with these fields:</p>
           <ul class="api-fields">
+            <li><code>inputVideo</code> — absolute path to a local video file (required)</li>
             <li>
-              <code>caption</code> — absolute path to a local caption file (SRT, VTT, SBV, ASS/SSA,
-              ITT/TTML, …)
-            </li>
-            <li><code>inputVideo</code> — absolute path to a local video file</li>
-            <li>
-              <code>exportedVideo</code> — absolute path for the output file (must be
+              <code>exportedVideo</code> — absolute path for the output file (required; must be
               <code>.mp4</code>; if you omit the extension, <code>.mp4</code> is appended)
+            </li>
+            <li>
+              <code>caption</code> — absolute path to a local caption file (optional; SRT, VTT,
+              SBV, ASS/SSA, ITT/TTML, …). Omit to convert video to MP4 without burn-in.
             </li>
           </ul>
           <p>
@@ -449,6 +460,14 @@
     "caption": "/Users/you/Movies/talk.srt",
     "inputVideo": "/Users/you/Movies/talk.mov",
     "exportedVideo": "/Users/you/Movies/talk_captioned.mp4"
+  }'</code></pre>
+
+          <h4>Sample: convert video only (no captions)</h4>
+          <pre class="api-code" tabindex="0"><code>curl -X POST http://127.0.0.1:18765/export \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "inputVideo": "/Users/you/Movies/clip.mov",
+    "exportedVideo": "/Users/you/Movies/clip_converted.mp4"
   }'</code></pre>
 
           <h4>Sample: export with style overrides</h4>
@@ -544,9 +563,9 @@ curl -X POST http://127.0.0.1:18765/export \
           <div>
             <h2>Tip or feedback</h2>
             <p class="lead">
-              Free burn-in stays unlimited when you bring a video and caption file. CaptionBake Pro
-              (AI captions, karaoke tooling, automation) is coming soon via Lemon Squeezy. Tips via
-              GitHub Sponsors are optional and still appreciated.
+              Free export stays unlimited — burn captions when you have a file, or convert video
+              alone to MP4. CaptionBake Pro (AI captions, karaoke tooling, automation) is coming soon
+              via Lemon Squeezy. Tips via GitHub Sponsors are optional and still appreciated.
             </p>
           </div>
           <div class="strip-actions">
