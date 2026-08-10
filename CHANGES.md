@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### captionbake/free-convert-to-mp4
+
+- Documented free caption-optional export: convert MOV/MKV/WebM to social-ready MP4 without a caption file, or burn in when you have one.
+- Updated Free vs Pro copy, feature cards, gallery captions, and HTTP API docs (optional `caption`, convert-only sample).
+
 ### feat/capy-merge-spa-support
 
 - Added a Capy Merge Spa support page (contact, FAQ, app details) and linked it from the game home and privacy nav.
