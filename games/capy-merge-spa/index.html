@@ -188,6 +188,17 @@
           grid-template-columns: 1fr;
         }
       }
+
+      .store-badge {
+        display: inline-flex;
+        align-items: center;
+        line-height: 0;
+      }
+
+      .store-badge img {
+        height: 40px;
+        width: auto;
+      }
     </style>
   </head>
   <body>
@@ -242,7 +253,20 @@
               <span class="game-badge">Free · iOS · Casual / Idle</span>
             </p>
             <div class="hero-actions">
-              <a class="button" href="#how-to-play">How to play</a>
+              <a
+                class="store-badge"
+                href="https://apps.apple.com/us/app/capy-merge-spa/id6797335264"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../../assets/badges/download-on-the-app-store.svg"
+                  width="120"
+                  height="40"
+                  alt="Download on the App Store"
+                />
+              </a>
+              <a class="button button-secondary" href="#how-to-play">How to play</a>
               <a class="button button-secondary" href="privacy.html">Privacy policy</a>
             </div>
           </div>
@@ -341,6 +365,15 @@
           <ul class="feature-list">
             <li><strong>Developer:</strong> Core Logic LLC</li>
             <li><strong>Platform:</strong> iOS (Android planned)</li>
+            <li>
+              <strong>App Store:</strong>
+              <a
+                href="https://apps.apple.com/us/app/capy-merge-spa/id6797335264"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Download on the App Store</a
+              >
+            </li>
             <li><strong>Price:</strong> Free, with optional rewarded ads</li>
             <li><strong>Age:</strong> General audiences / 4+</li>
             <li><strong>Bundle ID:</strong> <code>cc.corelogic.capymeregespa</code></li>
