@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### feat/app-ads-txt
+
+- Added `app-ads.txt` at the site root (`www.corelogic.cc/app-ads.txt`) so AdMob can verify Capy Merge Spa.
+
 ### feat/capy-app-store-button
 
 - Added a Download on the App Store badge and listing link on the Capy Merge Spa product page.
