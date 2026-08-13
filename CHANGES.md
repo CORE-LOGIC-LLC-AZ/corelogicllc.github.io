@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### feat/capy-app-store-button
+
+- Added a Download on the App Store badge and listing link on the Capy Merge Spa product page.
+
 ### captionbake/free-convert-to-mp4
 
 - Documented free caption-optional export: convert MOV/MKV/WebM to social-ready MP4 without a caption file, or burn in when you have one.
