@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### feat/capy-product-screenshots
+
+- Refreshed the Capy Merge Spa product gallery with studio captures of all eight key screens (grid, album, shop, settings, Double Relax, detail, share moment, spa card).
+- Added a settings screenshot on the support page.
+
 ### feat/app-ads-txt
 
 - Added `app-ads.txt` at the site root (`www.corelogic.cc/app-ads.txt`) so AdMob can verify Capy Merge Spa.
