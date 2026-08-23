@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### captionbake/timing-editor-and-free-font
+
+- CaptionBake: free styling is Helvetica (size, layout, and colors stay free); Pro unlocks the system font list.
+- CaptionBake: Pro word timing editor is documented as available with spoken-word highlight off.
+
 ### feat/capy-product-screenshots
 
 - Refreshed the Capy Merge Spa product gallery with studio captures of all eight key screens (grid, album, shop, settings, Double Relax, detail, share moment, spa card).

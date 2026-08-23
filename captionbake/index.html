@@ -6,12 +6,12 @@
     <title>CaptionBake | Core Logic LLC</title>
     <meta
       name="description"
-      content="CaptionBake is a freemium macOS and Windows app from Core Logic LLC. Free: style and burn captions into unlimited MP4s, or convert MOV/MKV/WebM to social-ready MP4 without captions. Pro unlocks AI caption generation from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
+      content="CaptionBake is a freemium macOS and Windows app from Core Logic LLC. Free: Helvetica styling, unlimited MP4 burn-in, or convert MOV/MKV/WebM to social-ready MP4 without captions. Pro unlocks system fonts, AI captions from audio, Whisper karaoke, word timing, .ass export, and a local HTTP API."
     />
     <meta property="og:title" content="CaptionBake" />
     <meta
       property="og:description"
-      content="Free: burn captions into MP4, or convert video to social-ready MP4 without a caption file. Pro adds AI captions from audio, Whisper karaoke, word timing, and local HTTP automation."
+      content="Free: Helvetica burn-in and convert-to-MP4. Pro adds system fonts, AI captions from audio, Whisper karaoke, word timing, and local HTTP automation."
     />
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
@@ -151,8 +151,10 @@
               Burn captions into video — style them live and export a finished MP4 for free.
               Captions are optional: import SRT, VTT, and more when you have them, or export
               video alone to convert formats like MOV to a social-ready MP4 for Instagram.
+              Free styling uses Helvetica; size, color, and placement stay unlimited.
               No captions yet? Pro generates English captions from the audio with on-device Whisper,
-              plus karaoke highlight, word timing review, editable
+              plus the full system font list, karaoke highlight, a word timing editor (works
+              with highlight off), editable
               <code>.ass</code> export, and a local HTTP API.
             </p>
             <div class="hero-actions" id="download">
@@ -283,7 +285,10 @@
               alt="CaptionBake style panel with color, stroke, shadow, and alignment controls"
               loading="lazy"
             />
-            <figcaption>Tune color, stroke, shadow, and placement in the Style panel.</figcaption>
+            <figcaption>
+              Tune size, color, stroke, shadow, and placement. Free uses Helvetica; Pro unlocks
+              system fonts and named presets.
+            </figcaption>
           </figure>
           <figure class="shot">
             <img
@@ -306,8 +311,9 @@
           <article class="offer-item">
             <h3>Live styling</h3>
             <p>
-              Import a video and optional caption file, then tweak font, color, stroke, shadow,
-              position, and safe areas in a real-time preview. Press ⌘I to open Import anytime.
+              Import a video and optional caption file, then tweak size, color, stroke, shadow,
+              position, and safe areas in a real-time preview. Free uses Helvetica; Pro unlocks
+              your system fonts and named presets. Press ⌘I to open Import anytime.
               Generating captions from audio is Pro.
             </p>
           </article>
@@ -340,11 +346,12 @@
             </p>
           </article>
           <article class="offer-item">
-            <h3>Word highlight <span class="feature-badge">Pro</span></h3>
+            <h3>Word timing <span class="feature-badge">Pro</span></h3>
             <p>
-              Optionally highlight the spoken word using on-device ASR (Whisper). Alignment can
-              mis-hear or mistime words — review before you ship. Uses the same local model as AI
-              captions.
+              Align words with on-device Whisper, then edit text, duration, and timeline in the
+              review strip — even with spoken-word highlight turned off. Optional karaoke coloring
+              on preview and export. Alignment can mis-hear or mistime words; review before you
+              ship. Uses the same local model as AI captions.
             </p>
           </article>
           <article class="offer-item">
@@ -369,7 +376,7 @@
           <h2>Free vs Pro</h2>
           <p class="lead">
             Free export works with video alone (convert to MP4) or with a caption file (burn-in) —
-            download and start today. Pro unlocks AI captions from audio and karaoke tools for
+            download and start today. Pro unlocks system fonts, AI captions from audio, and karaoke tools for
             <strong>$39</strong> one-time; activate the license key in Settings (1 Mac).
           </p>
           <aside class="product-note" aria-label="Pro upgrade status">
@@ -382,17 +389,17 @@
           <article class="offer-item">
             <h3>Free</h3>
             <p>
-              Import a video; caption file optional (SRT, VTT, SBV, ASS/SSA, or TTML). Full canvas
-              styling, unlimited watermark-free MP4 burn-in, and caption-free convert to social-ready
-              MP4.
+              Import a video; caption file optional (SRT, VTT, SBV, ASS/SSA, or TTML). Helvetica
+              plus size, layout, colors, and stroke/shadow; unlimited watermark-free MP4 burn-in;
+              caption-free convert to social-ready MP4.
             </p>
           </article>
           <article class="offer-item">
             <h3>Pro</h3>
             <p>
-              AI caption generation from audio (English), plus Whisper karaoke alignment, word
-              timing / cascade editor, editable karaoke <code>.ass</code> export, named style
-              presets, and the local HTTP REST API.
+              Full system font list, AI caption generation from audio (English), Whisper karaoke,
+              word timing editor (available with highlight off), editable karaoke
+              <code>.ass</code> export, named style presets, and the local HTTP REST API.
             </p>
           </article>
         </div>
@@ -595,7 +602,7 @@ curl -X POST http://127.0.0.1:18765/export \
       </div>
     </footer>
 
-    <script src="./config.js?v=0.1.0-8baeeda3"></script>
+    <script src="./config.js?v=0.1.0-0ef2e44a"></script>
     <script src="./downloads.js?v=20260801f"></script>
     <script src="./activate.js?v=20260801d"></script>
     <script src="../assets/js/site-nav.js"></script>
