@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### feat/capy-1.0.1-product-page
+
+- Updated the Capy Merge Spa product page for 1.0.1 (Kami, guests, share sheet, Yuzu outfits, snack ads, gumdrop portraits).
+- Refreshed the gallery and support FAQ with new studio captures.
+
 ### captionbake/timing-editor-and-free-font
 
 - CaptionBake: free styling is Helvetica (size, layout, and colors stay free); Pro unlocks the system font list.
