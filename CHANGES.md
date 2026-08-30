@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### captionbake/http-generate-captions
+
+- CaptionBake HTTP API: documented `generateCaptions: true` on `POST /export` to transcribe English captions from audio and burn them in (mutually exclusive with `caption`).
+- Updated the CaptionBake API docs, HTTP feature card, and homepage product blurb.
+
 ### feat/capy-1.0.1-product-page
 
 - Updated the Capy Merge Spa product page for 1.0.1 (Kami, guests, share sheet, Yuzu outfits, snack ads, gumdrop portraits).
