@@ -358,7 +358,9 @@
             <h3>Local HTTP API <span class="feature-badge">Pro</span></h3>
             <p>
               Enable a localhost server from Settings to export from scripts or other apps while
-              CaptionBake is open — same styles as the Style panel.
+              CaptionBake is open — burn a caption file, convert video alone, or set
+              <code>generateCaptions: true</code> to transcribe English captions from audio and burn
+              them in. Same styles as the Style panel.
             </p>
           </article>
           <article class="offer-item">
@@ -409,9 +411,10 @@
         <div class="section-intro">
           <h2>Local HTTP API <span class="feature-badge">Pro</span></h2>
           <p class="lead">
-            Automate caption burn-in or caption-free MP4 convert from Final Cut, a shell script, or
-            any tool that can send HTTP. The server runs only while CaptionBake is open, and only on
-            your Mac (<code>127.0.0.1</code>). Requires CaptionBake Pro.
+            Automate caption burn-in, AI caption generation from audio, or caption-free MP4 convert
+            from Final Cut, a shell script, or any tool that can send HTTP. The server runs only
+            while CaptionBake is open, and only on localhost (<code>127.0.0.1</code>). Requires
+            CaptionBake Pro.
           </p>
         </div>
 
@@ -451,6 +454,11 @@
               <code>caption</code> — absolute path to a local caption file (optional; SRT, VTT,
               SBV, ASS/SSA, ITT/TTML, …). Omit to convert video to MP4 without burn-in.
             </li>
+            <li>
+              <code>generateCaptions</code> — <code>true</code> to transcribe the video audio with
+              on-device Whisper and burn in English captions. Do not also pass <code>caption</code>.
+              First use may download a model (~142&nbsp;MB); expect a longer request.
+            </li>
           </ul>
           <p>
             Any other Style panel fields are optional and override the live UI for that export only
@@ -475,6 +483,15 @@
   -d '{
     "inputVideo": "/Users/you/Movies/clip.mov",
     "exportedVideo": "/Users/you/Movies/clip_converted.mp4"
+  }'</code></pre>
+
+          <h4>Sample: generate captions from audio, then burn in</h4>
+          <pre class="api-code" tabindex="0"><code>curl -X POST http://127.0.0.1:18765/export \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "generateCaptions": true,
+    "inputVideo": "/Users/you/Movies/talk.mov",
+    "exportedVideo": "/Users/you/Movies/talk_captioned.mp4"
   }'</code></pre>
 
           <h4>Sample: export with style overrides</h4>
@@ -559,7 +576,9 @@ curl -X POST http://127.0.0.1:18765/export \
             <li>
               <code>wordHighlightEnabled</code> is an <strong>experimental</strong> ASR feature.
               On-device Whisper can mis-hear or mistime words, and the first run downloads a model
-              (~142&nbsp;MB of extra disk). Expect longer exports when it is enabled.
+              (~142&nbsp;MB of extra disk). Expect longer exports when it is enabled. The same
+              model is used when <code>generateCaptions</code> is <code>true</code>; generated cues
+              already include word timings, so karaoke burn-in does not run Whisper a second time.
             </li>
           </ul>
         </div>
