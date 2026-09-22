@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### captionbake/demo-video-and-http-preset
+
+- Added the CaptionBake YouTube demo to the product page, with a Watch the demo section and a hero jump link.
+- Documented HTTP `preset` on `POST /export` so scripts can reuse a saved Style panel name.
+
 ### captionbake/http-generate-captions
 
 - CaptionBake HTTP API: documented `generateCaptions: true` on `POST /export` to transcribe English captions from audio and burn them in (mutually exclusive with `caption`).

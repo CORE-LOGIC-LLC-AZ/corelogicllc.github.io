@@ -16,7 +16,7 @@
     <meta property="og:image" content="images/screenshot-3.png" />
     <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="../assets/css/styles.css?v=20260726a" />
-    <link rel="stylesheet" href="captionbake.css?v=20260804a" />
+    <link rel="stylesheet" href="captionbake.css?v=20260921a" />
   </head>
   <body>
     <header class="site-header">
@@ -208,6 +208,7 @@
             </div>
             <p class="meta">
               macOS 12+ · Windows 10+ · FFmpeg included · Free burn-in ·
+              <a href="#demo">Watch the demo</a> ·
               <a href="#pricing">Pro upgrade soon</a> ·
               <a href="#api">HTTP API</a> ·
               <a href="https://github.com/sponsors/CORE-LOGIC-LLC-AZ">Leave a tip</a>
@@ -243,6 +244,27 @@
               alt="CaptionBake preview with live caption styling on a video"
             />
           </figure>
+        </div>
+      </section>
+
+      <section id="demo" class="container section">
+        <div class="section-intro">
+          <h2>Watch the demo</h2>
+          <p class="lead">
+            Live caption styling, MP4 burn-in, and on-device AI karaoke alignment.
+          </p>
+        </div>
+        <div class="demo-video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/Rg3MvKzqAwU"
+            width="560"
+            height="315"
+            title="CaptionBake Demo: Offline Subtitle Styling, Burn-In &amp; On-Device AI Karaoke Alignment"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
         </div>
       </section>
 
@@ -360,7 +382,7 @@
               Enable a localhost server from Settings to export from scripts or other apps while
               CaptionBake is open — burn a caption file, convert video alone, or set
               <code>generateCaptions: true</code> to transcribe English captions from audio and burn
-              them in. Same styles as the Style panel.
+              them in. Pass a saved Style <code>preset</code> name instead of every style field.
             </p>
           </article>
           <article class="offer-item">
@@ -437,8 +459,9 @@
 
           <h3>2. Style first (optional)</h3>
           <p>
-            Tune the Style panel in the app as usual. Exports use those live settings unless your
-            request overrides individual fields. You can also
+            Tune the Style panel and <strong>Save preset</strong> with a name you will reuse in
+            scripts. Exports use the live Style panel unless your request passes
+            <code>preset</code> and/or individual field overrides. You can also
             <a href="#api-get-settings">read the current non-default style</a> over HTTP.
           </p>
 
@@ -459,10 +482,17 @@
               on-device Whisper and burn in English captions. Do not also pass <code>caption</code>.
               First use may download a model (~142&nbsp;MB); expect a longer request.
             </li>
+            <li>
+              <code>preset</code> — name of a saved Style panel preset (optional). Applied for that
+              export only; the live panel does not change. Match is case-insensitive; if several
+              presets share a name, the most recently updated is used. Unknown name returns
+              <code>400</code>.
+            </li>
           </ul>
           <p>
-            Any other Style panel fields are optional and override the live UI for that export only
-            (same names as in the app / GET response): <code>fontFamily</code>,
+            Any other Style panel fields are optional and override the preset (or the live UI if you
+            omit <code>preset</code>) for that export only (same names as in the app / GET response):
+            <code>fontFamily</code>,
             <code>fontSize</code>, <code>bold</code>, <code>italic</code>, <code>textColor</code>,
             <code>alignment</code>, <code>offsetYPercent</code>, <code>wordHighlightEnabled</code>,
             and so on.
@@ -493,6 +523,20 @@
     "inputVideo": "/Users/you/Movies/talk.mov",
     "exportedVideo": "/Users/you/Movies/talk_captioned.mp4"
   }'</code></pre>
+
+          <h4>Sample: export with a style preset</h4>
+          <pre class="api-code" tabindex="0"><code>curl -X POST http://127.0.0.1:18765/export \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "caption": "/Users/you/Movies/talk.srt",
+    "inputVideo": "/Users/you/Movies/talk.mov",
+    "exportedVideo": "/Users/you/Movies/talk_captioned.mp4",
+    "preset": "Broadcast"
+  }'</code></pre>
+          <p>
+            Save the look in the Style panel first. Optional style fields in the same body overlay
+            the preset (for example <code>fontSize</code>).
+          </p>
 
           <h4>Sample: export with style overrides</h4>
           <pre class="api-code" tabindex="0"><code>curl -X POST http://127.0.0.1:18765/export \
